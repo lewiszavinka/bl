@@ -1,0 +1,141 @@
+<?php
+session_start(); 
+// if (!$_SESSION['nyelv']) { $_SESSION['nyelv'] ='HU'; }
+//$language=$_SESSION['nyelv'];
+
+$language= 'HU';
+
+$valtozo_nelkuli_url=explode("&",$_SERVER['QUERY_STRING']);
+$sajat_url = $valtozo_nelkuli_url[0];
+
+$q = $sajat_url;
+
+  $orig_url = array( 
+    0 => '', 
+    1 => '', 
+    2 => ''  ); 
+
+if (isset($_GET['mod'])) $orig_url = '';
+else {
+if (strpos($sajat_url, '/') !== false) {
+    $orig_url = explode("/", $sajat_url);
+	$q=$orig_url[0];
+	$parameter=$orig_url[1];
+	if (isset($orig_url[2])) $pageback=$orig_url[2];
+} 
+else {  $parameter = ''; }
+
+//$orig_url=explode("/",$sajat_url);
+//$q=$orig_url[0];
+//$parameter=$orig_url[1];
+//$pageback=$orig_url[2];
+}
+
+include($language.'.php');
+include('funkciok.php');
+include('filemanager/config/configurate.php');
+
+
+breadcumb($q);
+
+if ($q!=="galeria") include ('fejlec.php');
+
+$ok=0;
+if((!$q) || ($q=="")){ start(); $ok=1;}
+
+if (($q=="keres") and ($ok==0)){ include('keres.php'); $ok=1;}
+if (($q=="galeria") and ($ok==0)){ include('foto.php'); $ok=1;}
+
+else { 
+if ($ok==0) reszletek($q); 
+}
+?>
+<!-- footer section -->
+<div class="footer">
+	<div class="container">
+		<p><? footer(); ?></p><br>
+	</div>
+</div>
+
+
+<!-- /footer section -->
+<a href="#0" class="cd-top">Top</a>
+
+<!-- js files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script src="js/main.js"></script> 
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a").on('click', function(event) {
+
+   // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+<!-- js for galeria -->
+<script src="js/jQuery.lightninBox.js"></script>
+<script type="text/javascript">
+	$(".lightninBox").lightninBox();
+</script>
+<!-- /js for galeria -->
+
+<!-- js for banner -->
+<script src="js/zslider-1.0.1.js"></script>
+<script type="text/javascript">
+		var slider = $('.slider').zslider({
+			imagePanels: $('.slider-panel'),
+			ctrlItems: $('.slider-item'),
+			ctrlItemHoverCls: 'slider-item-selected',
+			//panelHoverShowFlipBtn: false,
+			flipBtn: {
+				container: $('.slider-page'),
+				preBtn: $('.slider-pre'), 
+				nextBtn: $('.slider-next')
+			},
+			callbacks: {
+				animate: function(imagePanels, ctrlItems, fromIndex, toIndex) {
+					return true;
+				}
+			}
+		});
+	</script>
+<!-- /js for banner -->
+<!-- js for sticky header -->
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<!-- /js for sticky header -->
+
+<!-- /js files -->
+
+<? if (kapcs()) { mysqli_close (kapcs()); } ?>
