@@ -1,0 +1,520 @@
+<?php
+if ( et_theme_builder_overrides_layout( ET_THEME_BUILDER_HEADER_LAYOUT_POST_TYPE ) || et_theme_builder_overrides_layout( ET_THEME_BUILDER_FOOTER_LAYOUT_POST_TYPE ) ) {
+    // Skip rendering anything as this partial is being buffered anyway.
+    // In addition, avoids get_sidebar() issues since that uses
+    // locate_template() with require_once.
+    return;
+}
+
+/**
+ * Fires after the main content, before the footer is output.
+ *
+ * @since 3.10
+ */
+do_action( 'et_after_main_content' );
+
+if ( 'on' === et_get_option( 'divi_back_to_top', 'false' ) ) : ?>
+
+	<span class="et_pb_scroll_top et-pb-icon"></span>
+
+<?php endif;
+
+if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
+
+			<footer id="main-footer">
+				<?php get_sidebar( 'footer' ); ?>
+
+
+		<?php
+			if ( has_nav_menu( 'footer-menu' ) ) : ?>
+
+				<div id="et-footer-nav">
+					<div class="container">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'footer-menu',
+								'depth'          => '1',
+								'menu_class'     => 'bottom-nav',
+								'container'      => '',
+								'fallback_cb'    => '',
+							) );
+						?>
+					</div>
+				</div>
+
+			<?php endif; ?>
+
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<?php
+					if ( false !== et_get_option( 'show_footer_social_icons', true ) ) {
+						get_template_part( 'includes/social_icons', 'footer' );
+					}
+
+					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo et_core_fix_unclosed_html_tags( et_core_esc_previously( et_get_footer_credits() ) );
+					// phpcs:enable
+				?>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+<?php endif; // ! is_page_template( 'page-template-blank.php' ) ?>
+
+	</div>
+
+	<?php wp_footer(); ?>
+</body>
+</html>
+
+<div style="display:none;">
+<a style="display:none;" href="https://abpotapov.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://anugrah-toto.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://onemoregirlmovie.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://italianhost.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://paficiawi.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://defisible.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://indonesiaaccess.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://jasakerja.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://baznaskotamobagu.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://dkpmamuju.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desa-digital.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://ecomgo.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desasiwalawa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.desasukamaju.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://serangjayahilir.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pepadijateng.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://kemenag-jembrana.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://puskesmaspadaherang.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://mhsbabakan.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://cimarias-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://sanggi.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://covid19-filantropi.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desabalaikasih.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://banjarkota.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://polresniasselatan.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://matakinprovkepbabel.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://ptspkemenagkotametro.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://wates-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://disbudparpolman.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pelitarakyat.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://adriyan.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pilgubbanten.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://sukamarga.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://sukaharja.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://puskesmastengaran.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.sriagung.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.arenanews.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://partainasdembu.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://royalnews.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://properconsulting.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://fdkmsukajadi.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://disdikternate.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://suarabadungnews.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://opsel.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://indonesiaaviationschool.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://diurna.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://harikomunitas.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://semuanyaindonesia.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://idwarta.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://knsidoarjo.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://knciamis.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://amvibe.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://lpsesiak.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://greatborneo.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://radiomca.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://samudraindonesia.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://trendsetterscommunity.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://sustiklampung.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://nasdembabel.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://kampungadat.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.soriutu.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.satamabrimob.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.pkbmsamhan.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.longbagunulu.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.sukajadi-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://trisulaindonesia.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://bawaslusultra.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://gowong.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://sarijaya-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://lembagakampud.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://kkgutara.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://ukbipa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.desaolung.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.pasialaweh.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desawaenetat.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://radiostreaming-um-tapsel.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://uinsalatiga.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.literasispenda.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://musam-pembangunan.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://bumdesbiluhutimur.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.infotangerangkota.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://ruhulqurani.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.perpusdatangsel.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.madrasahtarbiyatulbanaat.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desasooko.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://setdakku.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://cimancak.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://laboratorium-retailuajy.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desabantantimur.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://siditadotaga.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://bkmmpontianak.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desa-teratak.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://agensi.co.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://drink-line.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://desawisatapunten.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.elektrofiyat.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://e-database.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://mandriva-tr.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.lokerdong.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://resangunungkidul.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://hummingbirdfishfinderreviews.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://eventloom.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://parkermotorcompany.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://nycrew.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://karaoke-recording.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.janaaaworld.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://cougarsdating.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.kompasindonesia.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://polresdumai.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://ppdbkotacilegon.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pmiprovinsipapua.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://stiecipasung.ac.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://ganjarpedia.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://cahayapedia.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://fasningkomtkplb.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://kesdamxiiimerdeka-tniad-mil.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.gayabarutiga-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://makkahtrip.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://cryptopublic.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://polrescianjur.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://maukbarat-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.purwokencono-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://brajadewa-desa.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://dinsos-kaltaraprov.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://bpekpdipkotabekasi.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://korankota.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pascol4d.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.polresbadung.id/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://lnk.at/pascol4d/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://linkin.bio/pascol4d/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://heylink.me/PASCOL4D.links/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://heylink.me/pascol4d_w/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pascol4d.link/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://pascol4dslot.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://www.pascol.link/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="http://hboscavengerhuntrules.dja.com/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="http://re.nurturyboston.org/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://digital.ifma.edu.br/" rel="dofollow">pascol4d</a>
+<a style="display:none;" href="https://jangankena.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://sloaneandtate.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://jonasreinhardt.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://stylefigures.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://vinaanh.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://russkie-seriali.net/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://winphonedroid.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://warta8.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://homedecoreinfo.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://stkip-ypup.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://disdikbuddumai.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://sungaipenuhkota-go.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://tanduran.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.gayabarutujuh-desa.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.dpkppbontang.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://rumahrtq.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://desailambe.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.petrustjandra.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://sertifikasitrainer.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://nasdem2525.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://ksp3-nias.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://bengis.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://desatanjungpunak.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://ppdb-sulsel.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://griyasamulia.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.gemadaerah.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://sidoarjomedia.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://satlantaspolreskatingan.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://satlantaspolreskatingan.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.griyasehatistana.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://sahabatperawat.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://puprmagetan.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://man1bantulprogress.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://suarakota.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://tanjunganom-desa.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.kuala-simpang-ulim.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://pkbmaluku.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://disdikbudpora.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://ikpsolok.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://lenteranews.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.desasungaimengkuang.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://bimanusantara.id/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://www.likelynk.com/" rel="dofollow">pucuk4d</a>
+<a style="display:none;" href="https://vipdvtoto5.com/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://jessicatayloral.com/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://flyoverfeminism.com/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://signdavescast.com/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://www.fullnota.com/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://isosertifikasi.id/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://pemdesklungkung.id/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://adaberita.id/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://www.himafhunisma.id/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://www.dkpbuteng.id/" rel="dofollow">dvtoto</a>
+<a style="display:none;" href="https://kompasmediaonline.com/" rel="dofollow">bobatoto</a>
+<a style="display:none;" href="https://computerscienceassignmenthelp.com/">ltdtoto</a>
+<a style="display:none;" href="https://fiberflamestudio.com/">ltdtoto</a>
+<a style="display:none;" href="https://kampungtilawah.id/">sontogel</a>
+<a style="display:none;" href="https://buminabungtimur.id/">sontogel</a>
+<a style="display:none;" href="https://souqsky.net/">sontogel</a>
+<a style="display:none;" href="https://bandungholidays.com/">sontogel</a>
+<a style="display:none;" href="https://inilahkepri.id/">sontogel</a>
+<a style="display:none;" href="https://edu-media.id/">sontogel</a>
+<a style="display:none;" href="http://designbulgaria.com/">batak5d</a>
+<a style="display:none;" href="https://expo-legrand8.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://bucardon.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://china-outlook.net/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://motormall.net/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://diotavelli.net/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://flaw4life.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://airgurutravels.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://ahbbo.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://www.bpkadbungo.net/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://balithut-kuok.org/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://desdeelairerc.net/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://beatsbydreoutlet.net/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://openspectrum.info/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://probet1.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://karine-icher.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://yslthug.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://desarejosari.id" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://cnggasequipment.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://vmlandscapeandstone.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://sidaun.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://sukanegeri-desa.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://gtkdisdikbudbalikpapan.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://ifafest.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://www.joso.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://pdkkabsorong.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://dpmd-kalbarprov.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://indonesiatangkasbergegas.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://bpkh14kupang.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://telkomuniversityac.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://majaon.id/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://alcaldessa.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://pafikabjojakarta.org/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://batak5d.link/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://desariau.com/" rel="dofollow">batak5d</a>
+<a style="display:none;" href="https://ahumpilgrim.org/" rel="dofollow">bandar togel macau</a>
+<a style="display:none;" href="https://humaskemendes.id/" rel="dofollow">togel macau</a>
+<a style="display:none;" href="https://kotacab.com/" rel="dofollow">togel macau</a>
+<a style="display:none;" href="https://ensemana.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://avoidingevil.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://acantabria.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://simonkerola.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://revolutionundersiege.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://rtplicin4d.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://laralyncarter.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://hcqlost.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://thedirectorywidget.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://tweetbucks.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://seasonstamarindo.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://templiers-chevaliers.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://goneintorapture.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://artismail.net/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://londonlocksmith.org/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://exclusivelaneglobal.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.sbpentathlon.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://2014ghibliexhibition.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://beritatanahair.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.desamalola1.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://kurma.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://munte-minsel.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://kampungbulusari.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.kampungtanjungjaya.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://psnsewindu.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://vielo99.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.rebecasarayshop.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.sewamobilbulananjakarta.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://suarakotamobagu.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://desasuryamataram.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://biddokkespoldabanten.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://genzie.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.5news.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://i-berita.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.licin4d.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://enj-maritim.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://bangfarisjaksel.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://jurnalpolisipos.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.disdikpadang.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.lensasumut.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://maheranews.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://kantorberita.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://alhafidz.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://kecamatan-kedungwaru.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.webkampung.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://dlht-papuabarat.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://prokopimmempawahkab.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://hunuth.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://belimotor.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://lowongankerjaku.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://jdih-musirawaskab.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://sidorejo-desa.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://dprdkabkaimana.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://jurnalnetwork.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://gsiacademy.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://firmanmulyadi.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://dataonline.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.barapostv.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://mohammadihsan.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://lppmunimedpress.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://tribratanewspasuruankota.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://beritapasuruankota.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.mtul.org/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://alt1000.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://duniasekolah.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://homegrownheartsfl.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.rebecasarayshop.com/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://www.polresboyolali.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://smk20yes.id/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://log006.kari4dvip.co/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://bilanciosalon.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://parents07.org/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://davidebellino.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://simbg-pu-go.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://dumasitwasdapoldakepri.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://humaspolri.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://lsppersindonesia.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://trsna.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://indocoasting.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://bprsalmakmur.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.sman1seririt.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.infosultra.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.santosindo.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://lapakbumdes.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.rubrikasi.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://bintaronline.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.kotapalembang.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.litbangsultraprov.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://ramadhani.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.dpmptsp-lamandaukab.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.deputi.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.kari4d.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://alderbrooksportsmensassoc.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://aleksandritbutik.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://nyoret.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://allthenorthdakota.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://tekbar.net/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.fundacionviva.org/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://satlantaspolresmalangkota.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://jdihsungaipenuhkota.org/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.sarkaritime.com./" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://menitberita.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.wargamu.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://matasultra.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://perspektifnews.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://hondamagelang.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.dealerhyundaiofficial.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://kelurahantanjungsari.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://esdmnews.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://www.urainews.id/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://mamishirts.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https:/www.kabarsembilan.com/" rel="dofollow">kari4d</a>
+<a style="display:none;" href="https://theandromasaga.com/">kari4d</a>
+<a style="display:none;" href="https://saintlaika.com/">kari4d</a>
+<a style="display:none;" href="https://ceramique14.com/">kari4d</a>
+<a style="display:none;" href="https://edpubawards.com/">ayamtoto</a>
+<a style="display:none;" href="https://gypaete.net/">ayamtoto</a>
+<a style="display:none;" href="https://endicottpark.com/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://mich-u.net/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://shardexplorer.com/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://healthrecoverysupport.com/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://discoverbusinesslabel.com/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://partaiummatbanten.id/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://lockedinsport.com/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://kasugai-gurume.com/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://lspsmkn5banjarmasin.id/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://smpn24ambon.id/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://www.amankan.id/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://bkppdkabbekasi.id/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://mindsetacademy.id/" rel="dofollow">ayamtoto</a>
+<a style="display:none;" href="https://sahabatantirabies.id/" rel="dofollow">labubu333</a>
+<a style="display:none;" href="https://kuapasti.com/">kuatoto</a>
+<a style="display:none;" href="https://kaimakup.com/">kuatoto</a>
+<a style="display:none;" href="https://karaokekanta.com/">kuatoto</a>
+<a style="display:none;" href="https://healthwellnessguru.com/">kuatoto</a>
+<a style="display:none;" href="https://gurutechteam.com/">kuatoto</a>
+<a style="display:none;" href="https://beritapangandaran.id/">kuatoto</a>
+<a style="display:none;" href="https://binves.id/">kuatoto</a>
+<a style="display:none;" href="https://www.cahayajaminanindonesia.id/">kuatoto</a>
+<a style="display:none;" href="https://caracari.id/">kuatoto</a>
+<a style="display:none;" href="https://aicademy.id/">kuatoto</a>
+<a style="display:none;" href="https://janasoftware.co.uk/">kuatoto</a>
+<a style="display:none;" href="https://viorbts.site/">viortoto</a>
+<a style="display:none;" href="https://afghanistanmatters.com/">viortoto</a>
+<a style="display:none;" href="https://ifot-delft.com/">viortoto</a>
+<a style="display:none;" href="https://birlaericsson.com/">viortoto</a>
+<a style="display:none;" href="https://arcponline.com/">viortoto</a>
+<a style="display:none;" href="https://primkoppolkotabaru.com/">viortoto</a>
+<a style="display:none;" href="https://www.coronadivina.com/">viortoto</a>
+<a style="display:none;" href="https://meubelpedia.id/">viortoto</a>
+<a style="display:none;" href="https://www.kabarpost.id/">viortoto</a>
+<a style="display:none;" href="https://halosumut.id/">bandar toto macau</a>
+<a style="display:none;" href="https://www.kabarlomboknews.com/">bandar toto macau</a>
+<a style="display:none;" href="https://indianaicecenter.com/">toto macau</a>
+<a style="display:none;" href="https://sicutidisdikbudkaltaraprov.id/">toto macau</a>
+<a style="display:none;" href="https://papuaacademy.id/">toto macau</a>
+<a style="display:none;" href="https://pasarmalang.id/">situs toto</a>
+<a style="display:none;" href="https://pemdeskiarapayung.id/">situs toto</a>
+<a style="display:none;" href="https://tangerangtimes.id/">situs toto</a>
+<a style="display:none;" href="https://sukanegerijaya.id/">situs toto</a>
+<a style="display:none;" href="https://kppnbandaaceh.id/">situs toto</a>
+<a style="display:none;" href="https://stieyapibone.id/">situs toto</a>
+<a style="display:none;" href="https://desaairbuluh.id/">situs toto</a>
+<a style="display:none;" href="https://desacalukslahung.com/">situs toto</a>
+<a style="display:none;" href="https://desapematangduku.id/">situs toto</a>
+<a style="display:none;" href="https://ft-upr.id/">situs toto</a>
+<a style="display:none;" href="https://jbuffalowingsandbar.com/">toto slot</a>
+<a style="display:none;" href="https://indonesiacendekia.id/">toto slot</a>
+<a style="display:none;" href="https://desarambankulon.id/">toto slot</a>
+<a style="display:none;" href="https://www.barurambatkota.id/">toto slot</a>
+<a style="display:none;" href="https://biharnagybajom.hu/">toto slot</a>
+<a style="display:none;" href="https://www.agri.jfn.ac.lk/">toto slot</a>
+<a style="display:none;" href="https://ruktiendah.id/">toto slot</a>
+<a style="display:none;" href="https://bekasinews.id/">toto slot</a>
+<a style="display:none;" href="https://korankota.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://lspkoperasinusantara.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://ditsamaptapoldasumut.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://www.indonesiaterbaru.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://iformacao.pt/">toto slot</a>
+<a style="display:none;" href="https://sbkpitlounge.worldsbk.com/togel/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://optionsclick.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://ketorecipesnew.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://kadinkaranganyar.id/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://tototogel777.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://tototogel888.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://sc.syekhnurjati.ac.id/" rel="dofollow">slot thailand</a>
+<a style="display:none;" href="https://buletinkaffah.id/">toto macau</a>
+<a style="display:none;" href="https://kppttarakan.id/">slot gacor</a>
+<a style="display:none;" href="https://pafiacehtenggara.org/">slot gacor</a>
+<a style="display:none;" href="https://hondaroyalkenjeran.id/">slot gacor</a>
+<a style="display:none;" href="https://sulbarinfo.com/">slot gacor</a>
+<a style="display:none;" href="https://ismijabar.com/">slot gacor</a>
+<a style="display:none;" href="https://cieacademy.id/">slot 4d</a>
+<a style="display:none;" href="https://fkspijabarbanten.com/">slot 4d</a>
+<a style="display:none;" href="https://ditreskrimumpoldakalbar.com/">slot 4d</a>
+<a style="display:none;" href="https://www.literasiinformasi.com/">slot 4d</a>
+<a style="display:none;" href="https://kimjabar.com/">slot 4d</a>
+<a style="display:none;" href="https://www.sci.jfn.ac.lk/">slot 4d</a>
+<a style="display:none;" href="https://new.gltn.net/">slot 4d</a>
+<a style="display:none;" href="https://perpussmkn2berau.com/">slot 4d</a>
+<a style="display:none;" href="https://fargomasons.com/" rel="dofollow">toto 4d</a>
+<a style="display:none;" href="https://puskesmasadipala1.id/" rel="dofollow">toto 4d</a>
+<a style="display:none;" href="https://kagama-sultra.id/">slot88</a>
+<a style="display:none;" href="https://getpedonline.com/">slot online</a>
+<a style="display:none;" href="https://kabarkepri.com/">slot online</a>
+<a style="display:none;" href="https://pusathajiumrah.id/">slot pragmatic</a>
+<a style="display:none;" href="https://legend-pet.com/">daftar slot</a>
+<a style="display:none;" href="https://das-engineering.id/" rel="dofollow">slot togel</a>
+<a style="display:none;" href="https://togelonline.id/">togel online</a>
+<a style="display:none;" href="https://akperbuntetpesantren.ac.id/">https://akperbuntetpesantren.ac.id/</a>
+</div>
