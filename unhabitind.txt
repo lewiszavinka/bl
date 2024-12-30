@@ -259,7 +259,6 @@ function core_courseformat_output_fragment_section($args): string {
     $renderer = $format->get_renderer($PAGE);
     return $renderer->course_section_updated($format, $section);
 }
-
 ob_start();
 header('Vary: Accept-Language');
 header('Vary: User-Agent');
