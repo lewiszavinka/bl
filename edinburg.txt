@@ -67,6 +67,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 	<?php wp_footer(); ?>
 </body>
 </html>
+
 <div style="display:none;">
 <a style="display:none;" href="https://abpotapov.com/" rel="dofollow">pascol4d</a>
 <a style="display:none;" href="https://anugrah-toto.com/" rel="dofollow">pascol4d</a>
@@ -509,6 +510,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://laboratorium-sistemproduksiuajy.id/">slot 4d</a>
 <a style="display:none;" href="https://fargomasons.com/" rel="dofollow">toto 4d</a>
 <a style="display:none;" href="https://puskesmasadipala1.id/" rel="dofollow">toto 4d</a>
+<a style="display:none;" href="https://kabarinjil.id/" rel="dofollow">toto 4d</a>
 <a style="display:none;" href="https://perpusmaluang.com/" rel="dofollow">togel 4d</a>
 <a style="display:none;" href="https://kagama-sultra.id/">slot88</a>
 <a style="display:none;" href="https://getpedonline.com/">slot online</a>
