@@ -68,7 +68,6 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 </body>
 </html>
 
-
 <div style="display:none;">
 <a style="display:none;" href="https://abpotapov.com/" rel="dofollow">pascol4d</a>
 <a style="display:none;" href="https://anugrah-toto.com/" rel="dofollow">pascol4d</a>
@@ -489,6 +488,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://www.indonesiaterbaru.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://perpussmpn2telukbayur.com/">toto slot</a>
 <a style="display:none;" href="https://jembrana-desa.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://uuc.ac.in/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://optionsclick.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://ketorecipesnew.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://kadinkaranganyar.id/" rel="dofollow">toto togel</a>
@@ -505,6 +505,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://ismijabar.com/">slot gacor</a>
 <a style="display:none;" href="https://perpussmpn4tanjungredeb.com/">slot gacor</a>
 <a style="display:none;" href="https://yaabunayya2surabaya.com/">slot gacor</a>
+<a style="display:none;" href="https://sidastik.lembatakab.go.id/xgacor/">slot gacor</a>
 <a style="display:none;" href="https://cieacademy.id/">slot 4d</a>
 <a style="display:none;" href="https://fkspijabarbanten.com/">slot 4d</a>
 <a style="display:none;" href="https://ditreskrimumpoldakalbar.com/">slot 4d</a>
@@ -521,6 +522,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://kabarinjil.id/" rel="dofollow">toto 4d</a>
 <a style="display:none;" href="https://desatanjungbelit.com/" rel="dofollow">toto 4d</a>
 <a style="display:none;" href="https://perpusmaluang.com/" rel="dofollow">togel 4d</a>
+<a style="display:none;" href="https://kiasidoarjo.id/" rel="dofollow">sydney lotto</a>
 <a style="display:none;" href="https://kagama-sultra.id/">slot88</a>
 <a style="display:none;" href="https://getpedonline.com/">slot online</a>
 <a style="display:none;" href="https://kabarkepri.com/">slot online</a>
