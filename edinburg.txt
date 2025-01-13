@@ -486,6 +486,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://kadinkaranganyar.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://indonesiatangkasbergegas.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://wisatapulautidung.id/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://pcmkedawung.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://tototogel777.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://tototogel888.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://sc.syekhnurjati.ac.id/" rel="dofollow">slot thailand</a>
