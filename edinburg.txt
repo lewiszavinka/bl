@@ -448,6 +448,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://aicademy.id/">kuatoto</a>
 <a style="display:none;" href="https://janasoftware.co.uk/">kuatoto</a>
 <a style="display:none;" href="https://nurulhaqmabbiritta.id/">mma128</a>
+<a style="display:none;" href="https://pp-albarokahmalang.com/">mma128</a>
 <a style="display:none;" href="https://halosumut.id/">bandar toto macau</a>
 <a style="display:none;" href="https://www.kabarlomboknews.com/">bandar toto macau</a>
 <a style="display:none;" href="https://indianaicecenter.com/">toto macau</a>
@@ -487,6 +488,13 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://wisatapulautidung.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://kepustakaan.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://pcmkedawung.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://ramkalbar.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://wartabangsa.id/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://wartamuslim.id/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://www.karanganyar-sampang.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://www.mtstqdarulfalahalfatahiyah.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://www.desawisataboho.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://sekolahharapanjaya.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://tototogel777.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://tototogel888.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://sc.syekhnurjati.ac.id/" rel="dofollow">slot thailand</a>
