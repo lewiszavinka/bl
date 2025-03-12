@@ -67,7 +67,6 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 	<?php wp_footer(); ?>
 </body>
 </html>
-
 <div style="display:none;">
 <a style="display:none;" href="https://abpotapov.com/" rel="dofollow">pascol4d</a>
 <a style="display:none;" href="https://anugrah-toto.com/" rel="dofollow">pascol4d</a>
@@ -480,6 +479,8 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://www.indonesiaterbaru.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://perpussmpn2telukbayur.com/">toto slot</a>
 <a style="display:none;" href="https://jembrana-desa.id/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://www.nusrat-alsunnah.com/" rel="dofollow">toto slot</a>
+<a style="display:none;" href="https://dishubluwu.com/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://uuc.ac.in/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://optionsclick.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://ketorecipesnew.com/" rel="dofollow">toto togel</a>
@@ -495,9 +496,10 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://www.mtstqdarulfalahalfatahiyah.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://www.desawisataboho.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://sekolahharapanjaya.id/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://kkn-ppm.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://tototogel777.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://tototogel888.id/" rel="dofollow">toto slot</a>
-<a style="display:none;" href="https://sc.syekhnurjati.ac.id/" rel="dofollow">slot thailand</a>
+<a style="display:none;" href="https://tribratanewsacehsingkil.com/" rel="dofollow">slot thailand</a>
 <a style="display:none;" href="https://buletinkaffah.id/">toto macau</a>
 <a style="display:none;" href="https://kppttarakan.id/">slot gacor</a>
 <a style="display:none;" href="https://pafiacehtenggara.org/">slot gacor</a>
