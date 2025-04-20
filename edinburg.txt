@@ -466,15 +466,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://adaberita.id/" rel="dofollow">dvtoto</a>
 <a style="display:none;" href="https://www.himafhunisma.id/" rel="dofollow">dvtoto</a>
 <a style="display:none;" href="https://www.dkpbuteng.id/" rel="dofollow">dvtoto</a>
-<a style="display:none;" href="https://kompasmediaonline.com/" rel="dofollow">bobatoto</a>
-<a style="display:none;" href="https://computerscienceassignmenthelp.com/">ltdtoto</a>
-<a style="display:none;" href="https://fiberflamestudio.com/">ltdtoto</a>
-<a style="display:none;" href="https://kampungtilawah.id/">sontogel</a>
-<a style="display:none;" href="https://buminabungtimur.id/">sontogel</a>
-<a style="display:none;" href="https://souqsky.net/">sontogel</a>
-<a style="display:none;" href="https://bandungholidays.com/">sontogel</a>
-<a style="display:none;" href="https://inilahkepri.id/">sontogel</a>
-<a style="display:none;" href="https://edu-media.id/">sontogel</a>
+<a style="display:none;" href="https://sekolahjurnalisme.id/" rel="dofollow">dvtoto</a>
 <a style="display:none;" href="http://designbulgaria.com/">batak5d</a>
 <a style="display:none;" href="https://expo-legrand8.com/" rel="dofollow">batak5d</a>
 <a style="display:none;" href="https://bucardon.com/" rel="dofollow">batak5d</a>
@@ -700,6 +692,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://kepustakaan.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://pcmkedawung.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://ramkalbar.com/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://pkbmpastimaju.com/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://wartabangsa.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://wartamuslim.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://www.karanganyar-sampang.com/" rel="dofollow">toto togel</a>
@@ -709,6 +702,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://kkn-ppm.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://kedasmesari.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://gkindonesia.id/" rel="dofollow">toto togel</a>
+<a style="display:none;" href="https://pkknetwork.id/" rel="dofollow">toto togel</a>
 <a style="display:none;" href="https://wartakerja.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://srikencono.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://seputarpurwokerto.com/" rel="dofollow">toto slot</a>
@@ -716,15 +710,19 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://tototogel777.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://tototogel888.id/" rel="dofollow">toto slot</a>
 <a style="display:none;" href="https://tribratanewsacehsingkil.com/" rel="dofollow">slot thailand</a>
+<a style="display:none;" href="https://websitesekolahbekasi.com/" rel="dofollow">slot thailand</a>
 <a style="display:none;" href="https://buletinkaffah.id/">toto macau</a>
 <a style="display:none;" href="https://kppttarakan.id/">slot gacor</a>
+<a style="display:none;" href="https://www.joso.id/" rel="dofollow">slot gacor</a>
 <a style="display:none;" href="https://pafiacehtenggara.org/">slot gacor</a>
 <a style="display:none;" href="https://hondaroyalkenjeran.id/">slot gacor</a>
 <a style="display:none;" href="https://sulbarinfo.com/">slot gacor</a>
 <a style="display:none;" href="https://ismijabar.com/">slot gacor</a>
 <a style="display:none;" href="https://perpussmpn4tanjungredeb.com/">slot gacor</a>
 <a style="display:none;" href="https://yaabunayya2surabaya.com/">slot gacor</a>
+<a style="display:none;" href="https://perpusinsancita.com/">slot gacor</a>
 <a style="display:none;" href="http://demo.runpage.com/">slot gacor</a>
+<a style="display:none;" href="https://masjid-annur.net/">slot gacor</a>
 <a style="display:none;" href="https://cieacademy.id/">slot 4d</a>
 <a style="display:none;" href="https://fkspijabarbanten.com/">slot 4d</a>
 <a style="display:none;" href="https://ditreskrimumpoldakalbar.com/">slot 4d</a>
