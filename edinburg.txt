@@ -274,6 +274,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 	<?php wp_footer(); ?>
 </body>
 </html>
+
 <div style="display:none;">
 <a style="display:none;" href="https://abpotapov.com/" rel="dofollow">pascol4d</a>
 <a style="display:none;" href="https://anugrah-toto.com/" rel="dofollow">pascol4d</a>
@@ -572,7 +573,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 <a style="display:none;" href="https://www.rebecasarayshop.com/" rel="dofollow">licin4d</a>
 <a style="display:none;" href="https://www.polresboyolali.id/" rel="dofollow">licin4d</a>
 <a style="display:none;" href="https://smk20yes.id/" rel="dofollow">licin4d</a>
-<a style="display:none;" href="https://thesbischool.org/" rel="dofollow">licin4d</a>
+<a style="display:none;" href="https://perspektifmaluku.com/" rel="dofollow">licin4d</a>
 <a style="display:none;" href="https://log006.kari4dvip.co/" rel="dofollow">kari4d</a>
 <a style="display:none;" href="https://bilanciosalon.com/" rel="dofollow">kari4d</a>
 <a style="display:none;" href="https://parents07.org/" rel="dofollow">kari4d</a>
