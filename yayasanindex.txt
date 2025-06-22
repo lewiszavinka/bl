@@ -1,0 +1,374 @@
+<?php include 'auto.php'; ?>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- BASE URL -->
+  <base href="https://testbed.yayasangemakasihyobel.org/" />
+  <!-- EOF BASE URL -->
+  <title>Home | Gema Kasih Yobel</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="Sekolah Yayasan Gema Kasih Yobel" />
+  <meta name="author" content="@yayasangky">
+  <meta name="description" content="Sekolah Yayasan Gema Kasih Yobel" /><meta name="robots" content="index,follow"/><meta property="og:url" content="https://testbed.yayasangemakasihyobel.org/"/><meta property="og:type" content="website"/><meta property="og:title" content="Gema Kasih Yobel"/><meta property="og:description" content="Sekolah Yayasan Gema Kasih Yobel"/><meta property="og:image" content="assets/uploads/app_settings/aeb9f0f858289d2c518dd697298bde96.png"/><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:creator" content="@heliosid" /><meta name="twitter:url" content="https://testbed.yayasangemakasihyobel.org/"/><meta name="twitter:description" content="Sekolah Yayasan Gema Kasih Yobel"/><meta name="twitter:image" content="assets/uploads/app_settings/aeb9f0f858289d2c518dd697298bde96.png"/><meta name="twitter:title" content="Gema Kasih Yobel"/>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/frontend_assets/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="assets/frontend_assets/plugins/fontawesome/css/all.css">
+
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/frontend_assets/css/input-material.css">
+  <link rel="stylesheet" href="assets/frontend_assets/css/style.css">
+
+  <link rel="shortcut icon" href="assets/uploads/app_settings/3bb565eda0a22efe6e5267516c1928e2.png" type="image/x-icon" />
+
+  <!-- ShareThis Platform -->
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e47e4627a88780012e17478&product=inline-share-buttons&cms=sop' async='async'></script>
+</head>
+
+<body>
+  <div id="nav-wrapper" class="fixed-top clearfix">
+    <section id="section-search">
+      <div class="container">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="form-search">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="text-search"><i class="fa fa-search"></i></span>
+              </div>
+              <form action="https://testbed.yayasangemakasihyobel.org/cari" id="form_search" method="post" accept-charset="utf-8">
+                                                                                                                             <input type="hidden" name="csrf_gky" value="d8c1ae0892316e489f3845c3b529184f" />
+              <input id="top-search" type="text" class="form-control" name="search" placeholder="Cari" aria-label="search" aria-describedby="text-search">
+              </form>            </div>
+          </div>
+          <a href="" id="close-form-search"><i class="fa fa-times-circle"></i></a>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-lg d-flex flex-row justify-content-around navbar-light bg-nav-main-color" id="main-nav">
+      <a class="navbar-brand" href="https://testbed.yayasangemakasihyobel.org/">
+        <h2>GEMA KASIH YOBEL</h2>
+      </a>
+      <div id="nav-banner" class="d-none d-lg-block ">
+        <a class="navbar-brand" href="donasi">DONASI</a>
+      </div>
+
+      <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="home">Beranda <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="tentang-yayasan">Tentang Yayasan</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="dukung-kami">Dukung Kami</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="berita">Berita</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="kontak">Kontak</a>
+            </li>
+                          <li class="nav-item d-md-none ">
+                <a class="nav-link" href="member"><i class="fa fa-user"></i> Member</a>
+              </li>
+                      </ul>
+          <ul class="navbar-nav ml-auto d-none d-xs-block">
+                          <li class="nav-item d-md-none ">
+                <a class="nav-link" href="member"><i class="fa fa-user"></i> Member</a>
+              </li>
+                      </ul>
+        </div>
+      </div>
+      <div class="navfa d-none d-lg-block">
+        <ul class="nav">
+          <li class="nav-item navbar-search">
+            <a href="javascript:void(0)" id="navbar-search-icon"><i class="fa fa-search"></i></a>
+          </li>
+                      <li class="nav-item member-login-icon d-none d-lg-block">
+              <a href="member/login"><i class="fa fa-user"></i></a>
+            </li>
+                  </ul>
+      </div>
+      <div class="navfill d-none d-lg-block"></div>
+    </nav>
+  </div>
+
+  <header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="assets/uploads/static_content/1/d6ce7754a8ed177777c8af68c95988c9.mp4" type="video/mp4">
+  </video>
+  <div class="container h-50">
+    <div class="d-flex text-center align-items-center">
+      <div class="hero-description text-white">
+        <h1>UNTUK MASYARAKAT INDONESIA YANG SEJAHTERA</h1>
+        <p class="mb-0">Mewujudkan Shalom secara kontekstual di tengah masyarakat Indonesia yang membutuhkan, melalui pelayanan kesehatan, pendidikan, pemberdayaan masyarakat dalam rangka mewujudkan misi Allah yang holistik.</p>
+        <p class="mb-0">
+            <a href="donasi"><button class="btn btn-primary btn-primary-red">Donasi Disini</button></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="info-box-section">
+	<div class="container">
+		<div class="row no-gutters">
+			<div class="col-12 col-lg-7">
+				<div class="info-box-content-1">
+					<h1 class="info-box-title mb-5">Yayasan Gema Kasih Yobel</h1>
+					<div class="info-box-subtitle">Didirikan
+pada Agustus 2011 di bawah naungan Sinode Gereja Kristus Yesus (GKY).
+
+Fokus
+kami adalah melayani masyarakat marginal dan daerah tertinggal yang kurang
+mendapatkan perhatian selama ini, dengan harapan dapat memajukan kehidupan
+mereka di masa depan, baik kehidupan jasmani maupun rohani. Untuk mencapai
+tujuan inilah maka pelayanan YASYOB berfokus pada pengembangan sumber daya
+manusia melalui bidang pendidikan.&nbsp;</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-5">
+				<div class="info-box-image" style="background: url('https://testbed.yayasangemakasihyobel.org/assets/frontend_assets/img/pledge.jpg') center center;background-size: cover;"></div>
+			</div>
+		</div>
+		<div class="row no-gutters">
+			<div class="col-12 col-lg-7">
+				<div class="info-box-content-2 news-highlight">
+					<h1 class="info-box-title mb-5">KABAR TERBARU</h1>
+					<p class="info-box-subtitle">Peringatan 50 Tahun pelayanan Pdt. DR. William H. Hosanna dan 8 Tahun Yayasan Gema Kasih Yobel.&nbsp; akan dilangsungkan di GKY JEMAAT MANGGA BESAR, Jl. Mangga Besar 1 No. 74 Jakarta Barat 11180, Sabtu, 30 November 2019, pk. 10.00 WIB.&nbsp;&nbsp;</p>
+					<a href="#">Baca...</a>
+				</div>
+			</div>
+			<div class="col-12 col-lg-5">
+				<div class="info-box-content-3">
+					<h1 class="info-box-title newsletter-title mb-5">NEWSLETTER</h1>
+					<p class="info-box-subtitle">Berlangganan Newsletter</p>
+					<div class="form-newsletter">
+						<form action="https://testbed.yayasangemakasihyobel.org/home/submit_newsletter" id="form-newsletter-submission" method="post" accept-charset="utf-8">
+                                                                                     <input type="hidden" name="csrf_gky" value="d8c1ae0892316e489f3845c3b529184f" />
+						<div class="input-group mb-3">
+						  <div class="input-group-prepend">
+						    <span class="input-group-text" id="email-newsletter"><i class="far fa-envelope"></i></span>
+						  </div>
+						  <input type="text" class="form-control" placeholder="Alamat Email" aria-label="email" aria-describedby="email-newsletter" name="email">
+						</div>
+						<button type="submit" class="btn btn-link">KIRIM</button>
+						</form>					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="news-section" class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1 class="title-section">BERITA</h1>
+			</div>
+		</div>
+		<div class="row news-container text-left">
+			<input type="hidden" name="csrf_gky" value="d8c1ae0892316e489f3845c3b529184f" />
+							<div class="col-12 col-md-4">
+					<div class="card news-card">
+					  <div class="card-body">
+					    <a href="berita/detail/133"><h4 class="card-title">test aja</h4></a>
+					    <p class="card-text">test juga aja</p>
+					  </div>
+					  <div class="card-footer d-flex justify-content-between">
+					  	<div><i class="fa fa-eye"></i> 14</div>
+					  	<a href="berita/detail/133">Tulis komentar</a>
+					  	<i class="far fa-heart like-button" data-id="133"></i>
+					  </div>
+					</div>
+				</div>
+							<div class="col-12 col-md-4">
+					<div class="card news-card">
+					  <div class="card-body">
+					    <a href="berita/detail/132"><h4 class="card-title">Book Week Sekolah Kasih Yobel Singkawang</h4></a>
+					    <p class="card-text">Pada bulan November 2023 Jenjang SD, SMP dan SMA melaksanakan kegiatan Book Week, hal ini penting untuk meningkatkan minat baca buku dan membaca &#8230;</p>
+					  </div>
+					  <div class="card-footer d-flex justify-content-between">
+					  	<div><i class="fa fa-eye"></i> 26</div>
+					  	<a href="berita/detail/132">Tulis komentar</a>
+					  	<i class="far fa-heart like-button" data-id="132"></i>
+					  </div>
+					</div>
+				</div>
+							<div class="col-12 col-md-4">
+					<div class="card news-card">
+					  <div class="card-body">
+					    <a href="berita/detail/130"><h4 class="card-title">Peringatan Hari Guru Nasional di Sekolah Kasih Yobel</h4></a>
+					    <p class="card-text">November yang baru kita lewati penuh dengan kesaksian yang boleh disharingkan, didoakan dan didukung.  Terutama, kita sambut dan syukuri Hari Guru Nasional pada &#8230;</p>
+					  </div>
+					  <div class="card-footer d-flex justify-content-between">
+					  	<div><i class="fa fa-eye"></i> 25</div>
+					  	<a href="berita/detail/130">Tulis komentar</a>
+					  	<i class="far fa-heart like-button" data-id="130"></i>
+					  </div>
+					</div>
+				</div>
+					</div>
+	</div>
+</section>
+
+<section id="banner-section">
+	<div class="container">
+		<div id="home-banner" class="d-flex justify-content-center align-items-center text-left" style="background: url('https://testbed.yayasangemakasihyobel.org/assets/frontend_assets/img/pledge.jpg') center center; background-size: cover;">
+			<div class="row">
+				<div class="col-xs-12 col-lg-8 d-flex align-items-center">
+					<h2 class="px-2">MENCERDASKAN ANAK BANGSA, JADI ORANG TUA ASUH</h2>
+				</div>
+				<div class="col-xs-12 col-lg-4 d-flex align-items-center">
+					<a href="member/daftar" class="px-5"><button class="btn btn-primary btn-primary-white">DAFTAR DISINI!</button></a>
+				</div>	
+			</div>
+		</div>
+	</div>
+</section>
+  <footer id="section-footer">
+    <div id="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-1 col-footer">
+            <div class="text-center">
+              <img src="assets/frontend_assets/img/logo.png" class="logo-image logo-footer-image">
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 col-footer">
+            <div class="d-flex justify-content-center">
+              <a href="donasi"><button class="btn btn-primary btn-primary-red">Donasi Disini</button></a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2 col-footer">
+            <h6>Yayasan</h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="tentang-yayasan" class="nav-link">Tentang Yayasan</a>
+              </li>
+              <li class="nav-item">
+                <a href="newsletter" class="nav-link">Newsletter</a>
+              </li>
+              <!-- <li class="nav-item">
+                  <a href="#" class="nav-link">Sinode GKY</a>
+                </li> -->
+            </ul>
+          </div>
+          <div class="col-12 col-lg-2 col-footer">
+            <h6>Bantuan</h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="dukung-kami/sekolah" class="nav-link">Sekolah Yobel</a>
+              </li>
+              <li class="nav-item">
+                <a href="donasi" class="nav-link">Anak Asuh</a>
+              </li>
+              <li class="nav-item">
+                <a href="member" class="nav-link">Orang Tua Asuh</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-4 col-footer">
+            <h6>Berlangganan Newsletter</h6>
+            <div class="form-newsletter">
+              <form action="https://testbed.yayasangemakasihyobel.org/home/submit_newsletter" id="form-newsletter-submission-footer" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_gky" value="d8c1ae0892316e489f3845c3b529184f" />     
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="email-newsletter"><i class="far fa-envelope"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Alamat Email" aria-label="email" aria-describedby="email-newsletter">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-link">KIRIM</button>
+                </div>
+              </div>
+              </form>            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex justify-content-between">
+            <div id="footer-nav">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="privasi" class="nav-link">Privasi</a>
+                  <!--<p style="padding-left: 16px">untuk kalangan sendiri</p>-->
+                </li>
+                <li class="nav-item">
+                  <a href="kontak" class="nav-link">Hubungi Kami</a>
+                </li>
+              </ul>
+            </div>
+            <div id="footer-lang">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="https://facebook.com" target="_blank" class="nav-link"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" target="_blank" class="nav-link"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" target="_blank" class="nav-link"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p style="padding-left: 16px"><strong>Untuk kalangan sendiri</strong></p>
+            </div></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/frontend_assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+  <script src="assets/frontend_assets/plugins/popper/popper.min.js"></script>
+  <script src="assets/frontend_assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src='assets/frontend_assets/plugins/jquery-validation/dist/jquery.validate.min.js'></script>
+  <script src="assets/frontend_assets/js/materialize-inputs.jquery.js"></script>
+  <script src="assets/frontend_assets/js/pdfobject.min.js"></script>
+  <script src="assets/frontend_assets/js/custom.js"></script>
+
+  
+  <script type="text/javascript">
+    $('.input-material-select').on('change', function() {
+      var value = this.value;
+      if (value != "") {
+        $('.input-material-select').attr('value', value);
+      } else {
+        $('.input-material-select').attr('value', '');
+      }
+    });
+  </script>
+      <script src="assets/frontend_assets/pages/home/home.js"></script>
+                                  </body>
+<!-- Modal -->
+<div class="modal fade" id="notification-modal" tabindex="-1" role="dialog" aria-labelledby="notification-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="notification-modal-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
