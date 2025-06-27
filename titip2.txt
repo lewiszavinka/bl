@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://mediaimg.art/img/karatetoto%20ico.jpg">
 <link rel="icon" type="image/png" sizes="16x16" href="https://mediaimg.art/img/karatetoto%20ico.jpg">
 <link rel="canonical" href="https://robocon.gnu.ac.in/" />
-<link rel="amphtml" href="https://aptspace.sgp1.cdn.digitaloceanspaces.com/gnuacin.html">
+<link rel="amphtml" href="https://aptspace.sgp1.cdn.digitaloceanspaces.com/gnuacin.html" />
 <link rel="preload" href="https://plerkejepit.cc/img/bannerkarate3.jpg" as="image" />
 <link rel="preconnect dns-prefetch" href="https://cart.lazada.co.id" />
 <link rel="preconnect dns-prefetch" href="https://acs-m.lazada.co.id" />
