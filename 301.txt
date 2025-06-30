@@ -1,0 +1,4 @@
+<?php  
+header("Location: https://www.ict.gov.mw/", true, 301);  
+exit();  
+?>
