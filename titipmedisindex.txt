@@ -1,3 +1,4 @@
+<?php
 /**
  * @defgroup index Index
  * Bootstrap and initialization code.
